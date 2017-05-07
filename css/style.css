@@ -1,6 +1,25 @@
+* {
+  box-sizing: border-box; }
+
 body {
   background-color: #191919;
   font-size: 10px; }
+
+.container {
+  width: 100%;
+  max-width: 1170px;
+  margin: 0 auto; }
+
+.main {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  -moz-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row; }
 
 .nav {
   display: -webkit-box;
@@ -28,7 +47,7 @@ body {
       color: #fefefe; }
       .nav__logo__link--up {
         color: #e53935; }
-  .nav__sign {
+  .nav__sign, .vision .manual__button {
     display: block;
     text-transform: uppercase;
     text-decoration: none;
@@ -38,14 +57,14 @@ body {
     color: #fefefe;
     text-align: center;
     position: relative; }
-    .nav__sign:before {
+    .nav__sign:before, .vision .manual__button:before {
       width: 16px;
       height: 16px;
       background: url("../img/steam-logo.png") no-repeat;
       content: "";
       position: absolute;
       right: 27%;
-      top: 35%; }
+      top: calc(50% - 8px); }
   .nav__social {
     padding: 20px 0;
     display: -webkit-box;
@@ -87,11 +106,236 @@ body {
     margin: 0;
     padding: 0; }
     .nav__list__items {
-      border-top: 1px solid #212121; }
+      border-top: 1px solid #212121;
+      border-bottom: 1px solid #212121;
+      position: relative; }
       .nav__list__items__link {
         font: 300 1.6em/4em "Montserrat", sans-serif;
         color: #fefefe;
         text-decoration: none;
+        text-transform: uppercase;
+        padding-left: 40px;
+        margin: 0;
+        display: block;
+        width: 100%;
+        height: 100%; }
+        .nav__list__items__link:hover {
+          background-color: #212121;
+          transition: all 0.35s; }
+      .nav__list__items .red {
+        color: #e53935; }
+      .nav__list__items .active {
+        background-color: #212121; }
+      .nav__list__items:before {
+        content: "";
+        width: 8px;
+        height: 12px;
+        position: absolute;
+        right: 20%;
+        top: calc(50% - 6px);
+        background: url("../img/menu_arrow.png");
+        cursor: pointer; }
+
+.vision {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex; }
+  .vision .manual {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    -moz-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    width: 33%;
+    margin-top: 40px; }
+    .vision .manual__choice {
+      display: -webkit-box;
+      display: -moz-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      -webkit-flex-direction: row;
+      -moz-flex-direction: row;
+      -ms-flex-direction: row;
+      flex-direction: row;
+      -webkit-justify-content: space-around;
+      -moz-justify-content: space-around;
+      -ms-justify-content: space-around;
+      justify-content: space-around;
+      -ms-flex-pack: space-around; }
+      .vision .manual__choice__button {
+        font: 700 1.6em/3.9em "Montserrat", sans-serif;
+        width: 170px;
+        background-color: transparent;
+        border: 1px solid #464646;
+        color: #464646;
         text-transform: uppercase; }
+      .vision .manual__choice .button__active {
+        background-color: #212121;
+        color: #fefefe; }
+    .vision .manual__inputs {
+      display: -webkit-box;
+      display: -moz-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      -webkit-flex-direction: column;
+      -moz-flex-direction: column;
+      -ms-flex-direction: column;
+      flex-direction: column; }
+      .vision .manual__inputs__label {
+        font: 300 1.6em/4em "Montserrat", sans-serif;
+        color: #fefefe;
+        width: 100%; }
+        .vision .manual__inputs__label span {
+          font-weight: 700; }
+      .vision .manual__inputs__input {
+        width: 100%;
+        background-color: #212121;
+        border: 0;
+        font: 700 3em/2em "Montserrat", sans-serif;
+        color: #fefefe;
+        padding-left: 20px; }
+    .vision .manual__button {
+      border: 0;
+      margin-top: 35px; }
+  .vision .history {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    -moz-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    padding: 0 15px;
+    width: 25%; }
+    .vision .history h2 {
+      text-transform: uppercase;
+      font: 700 1.6em/6em "Montserrat", sans-serif;
+      color: #fefefe;
+      margin: 0; }
+    .vision .history__item {
+      display: -webkit-box;
+      display: -moz-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      -webkit-flex-direction: row;
+      -moz-flex-direction: row;
+      -ms-flex-direction: row;
+      flex-direction: row;
+      -webkit-justify-content: space-between;
+      -moz-justify-content: space-between;
+      -ms-justify-content: space-between;
+      justify-content: space-between;
+      -ms-flex-pack: space-between;
+      width: 100%;
+      border-top: 1px solid #464646;
+      font: 600 1.6em/3.19em "Montserrat", sans-serif;
+      color: #fefefe; }
+      .vision .history__item--left {
+        color: #017c4c; }
+      .vision .history__item--right {
+        color: #717171; }
+      .vision .history__item .red {
+        color: #e53935; }
+      .vision .history__item:nth-child(7) {
+        opacity: 0.5; }
+      .vision .history__item:last-child {
+        opacity: 0.3;
+        border-bottom: 1px solid #464646; }
+
+.middle {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  -moz-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column; }
+
+.players {
+  font: 700 1.6em "Montserrat", sans-serif;
+  color: #fefefe;
+  padding: 0 15px;
+  border-top: 2px solid #464646;
+  margin-top: 70px;
+  text-align: left; }
+  .players__table thead th {
+    line-height: 6em;
+    text-transform: uppercase; }
+    .players__table thead th:not(:first-of-type) {
+      text-align: center; }
+  .players__table tbody tr {
+    line-height: 3em;
+    border-top: 1px solid #212121; }
+    .players__table tbody tr td {
+      color: #017c4c; }
+      .players__table tbody tr td:first-of-type {
+        color: #717171; }
+      .players__table tbody tr td:not(:first-of-type) {
+        text-align: center; }
+  .players__table__avatar {
+    vertical-align: middle;
+    padding-right: 20px; }
+
+.chat {
+  width: 340px; }
+  .chat__title {
+    width: 100%;
+    font: 700 1.6em/4em "Montserrat", sans-serif;
+    background-color: #e53935;
+    text-transform: uppercase;
+    text-align: center;
+    color: #fefefe;
+    position: relative; }
+    .chat__title:before {
+      position: absolute;
+      content: "";
+      background: url("../img/chat_icon.png");
+      width: 17px;
+      height: 14px;
+      right: 37%;
+      top: calc(50% - 7px); }
+  .chat__area__message {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: row;
+    -moz-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-align-items: center;
+    -moz-align-items: center;
+    -ms-align-items: center;
+    align-items: center;
+    border-top: 1px solid #212121;
+    padding: 15px 0; }
+    .chat__area__message img {
+      border-radius: 50%;
+      width: 50px;
+      height: 50px; }
+    .chat__area__message--box {
+      font: 400 1.4em "Montserrat", sans-serif;
+      padding: 0 20px;
+      width: 80%; }
+      .chat__area__message--box h3 {
+        color: #fefefe;
+        margin: 0 0 5px 0; }
+      .chat__area__message--box p {
+        margin: 0;
+        color: #717171; }
 
 /*# sourceMappingURL=style.css.map */

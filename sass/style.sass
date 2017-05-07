@@ -101,13 +101,20 @@ $main-color: #191919
 $red-color: #e53935
 $white-color: #fefefe
 $main-font: 'Montserrat', sans-serif
+*
+	box-sizing: border-box
+
 
 body
 	background-color: $main-color
-	box-sizing:border-box
 	font-size: 10px
-
-
+.container
+	width: 100%
+	max-width: 1170px
+	margin: 0 auto
+.main
+	+flexbox()
+	+flex-direction(row)
 .nav
 	+flexbox()
 	+flex-direction(column)
@@ -146,7 +153,7 @@ body
 			content: ""
 			position: absolute
 			right: 27%
-			top: 35%
+			top: calc(50% - 8px)
 	&__social
 		padding: 20px 0
 		+flexbox()
@@ -175,11 +182,185 @@ body
 		padding: 0
 		&__items
 			border-top: 1px solid #212121
+			border-bottom: 1px solid #212121
+			position: relative
+			
+
 			&__link
 				font: 300 1.6em/4em $main-font
 				color: $white-color
 				text-decoration: none
 				text-transform: uppercase
+				padding-left: 40px
+				margin: 0
+				display: block
+				width: 100%
+				height: 100%
+				&:hover
+					background-color: #212121
+					transition: all 0.35s
+			.red
+				color: $red-color
+			.active
+				background-color: #212121
+			
+			&:before
+				content: ""
+				width: 8px
+				height: 12px
+				position: absolute
+				right: 20%
+				top: calc(50% - 6px)
+				background: url('../img/menu_arrow.png')
+				cursor: pointer
+.vision
+	+flexbox()
+	.graph
 
+	.manual
+		+flexbox()
+		+flex-direction(column)
+		width: 33%
+		margin-top: 40px
+		&__choice
+			+flexbox()
+			+flex-direction(row)
+			+justify-content(space-around)
+			&__button
+				font: 700 1.6em/3.9em $main-font
+				width: 170px
+				background-color: transparent
+				border: 1px solid #464646
+				color: #464646
+				text-transform: uppercase
+			.button__active
+				background-color: #212121
+				color: $white_color
+		&__inputs
+			+flexbox()
+			+flex-direction(column)
+			&__label
+				font: 300 1.6em/4em $main-font
+				color: $white-color
+				width: 100%
+				span
+					font-weight: 700
+
+			&__input
+				width: 100%
+				background-color: #212121
+				border: 0
+				font: 700 3em/2em $main_font
+				color: $white_color
+				padding-left: 20px
+
+		&__button
+			@extend .nav__sign
+			border: 0
+			margin-top: 35px
+
+	.history
+		+flexbox()
+		+flex-direction(column)
+		padding: 0 15px
+		width: 25%
+		& h2
+			text-transform: uppercase
+			font: 700 1.6em/6em $main-font
+			color: $white-color
+			margin: 0
+		&__item
+			+flexbox()
+			+flex-direction(row)
+			+justify-content(space-between)
+			width: 100%
+			border-top: 1px solid #464646
+			font: 600 1.6em/3.19em $main_font
+			color: $white_color
+			&--left
+				color: #017c4c
+			&--right
+				color: #717171
+			& .red
+				color: $red-color
+			&:nth-child(7)
+				opacity: .5
 			
+			&:last-child
+				opacity: .3
+				border-bottom: 1px solid #464646
+.middle
+	+flexbox()
+	+flex-direction(column)
+.players
+	font: 700 1.6em $main_font
+	color: $white-color
+	padding: 0 15px
+	border-top: 2px solid #464646
+	margin-top: 70px
+	text-align: left
+	&__table
+		& thead
+			& th
+				line-height: 6em
+				text-transform: uppercase
+				&:not(:first-of-type)
+					text-align: center
+
+		& tbody	
+			& tr
+				line-height: 3em
+				border-top: 1px solid #212121
+				
+				& td
+					color: #017c4c
+					&:first-of-type
+						color: #717171
+					&:not(:first-of-type)
+						text-align: center
+
+		&__avatar
+			vertical-align: middle
+			padding-right: 20px
+.chat
+	width: 340px
+	&__title
+		width: 100%
+		font: 700 1.6em/4em $main_font
+		background-color: $red-color
+		text-transform: uppercase
+		text-align: center
+		color: $white_color
+		position: relative
+		&:before
+			position: absolute
+			content: ""
+			background: url('../img/chat_icon.png')
+			width: 17px
+			height: 14px
+			right: 37%
+			top: calc(50% - 7px)
+	&__area
+		&__message
+			+flexbox()
+			+flex-direction(row)
+			+align-items(center)
+			border-top: 1px solid #212121
+			padding: 15px 0
+			& img
+				border-radius: 50%
+				width: 50px
+				height: 50px
 			
+				
+			&--box
+				font: 400 1.4em $main_font
+				padding: 0 20px
+				width: 80%
+				
+				& h3
+					color: $white-color
+					margin: 0 0 5px 0
+				& p 
+					margin: 0
+					color: #717171
