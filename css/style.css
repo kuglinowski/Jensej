@@ -1,0 +1,97 @@
+body {
+  background-color: #191919;
+  font-size: 10px; }
+
+.nav {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  -moz-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  width: 100%;
+  max-width: 250px; }
+  .nav__logo {
+    display: block;
+    width: 100%; }
+    .nav__logo__header {
+      font: 700 3em "Montserrat", sans-serif;
+      text-transform: uppercase;
+      padding: 50px 0;
+      margin: 0 auto;
+      text-align: center; }
+    .nav__logo__link {
+      text-decoration: none;
+      color: #fefefe; }
+      .nav__logo__link--up {
+        color: #e53935; }
+  .nav__sign {
+    display: block;
+    text-transform: uppercase;
+    text-decoration: none;
+    width: 100%;
+    font: 700 1.6em/4em "Montserrat", sans-serif;
+    background-color: #e53935;
+    color: #fefefe;
+    text-align: center;
+    position: relative; }
+    .nav__sign:before {
+      width: 16px;
+      height: 16px;
+      background: url("../img/steam-logo.png") no-repeat;
+      content: "";
+      position: absolute;
+      right: 27%;
+      top: 35%; }
+  .nav__social {
+    padding: 20px 0;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: row;
+    -moz-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-justify-content: center;
+    -moz-justify-content: center;
+    -ms-justify-content: center;
+    justify-content: center;
+    -ms-flex-pack: center; }
+    .nav__social__items {
+      width: 18px;
+      height: 18px;
+      text-decoration: none;
+      margin-left: 10px; }
+    .nav__social .fb {
+      background: url("../img/fb_icon.png") no-repeat; }
+    .nav__social .twitter {
+      background: url("../img/twitter_icon.png") no-repeat; }
+    .nav__social .steam {
+      background: url("../img/steam_icon.png") no-repeat; }
+  .nav__list {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    -moz-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    list-style-type: none;
+    margin: 0;
+    padding: 0; }
+    .nav__list__items {
+      border-top: 1px solid #212121; }
+      .nav__list__items__link {
+        font: 300 1.6em/4em "Montserrat", sans-serif;
+        color: #fefefe;
+        text-decoration: none;
+        text-transform: uppercase; }
+
+/*# sourceMappingURL=style.css.map */

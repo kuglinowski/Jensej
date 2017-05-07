@@ -1,0 +1,185 @@
+
+=flexbox() 
+	display: -webkit-box
+	display: -moz-box
+	display: -ms-flexbox
+	display: -webkit-flex
+	display: flex
+
+
+
+=flex-direction($direction) 
+	-webkit-flex-direction: $direction
+	-moz-flex-direction: $direction
+	-ms-flex-direction: $direction
+	flex-direction: $direction
+
+
+
+=flex-wrap($wrap) 
+	-webkit-flex-wrap: $wrap
+	-moz-flex-wrap: $wrap
+	-ms-flex-wrap: $wrap
+	flex-wrap: $wrap
+
+
+
+=flex-flow($flow) 
+	-webkit-flex-flow: $flow
+	-moz-flex-flow: $flow
+	-ms-flex-flow: $flow
+	flex-flow: $flow
+
+
+
+=order($val) 
+	-webkit-box-ordinal-group: $val
+	-moz-box-ordinal-group: $val 
+	-ms-flex-order: $val 
+	-webkit-order: $val
+	order: $val
+
+
+
+=flex-grow($grow) 
+	-webkit-flex-grow: $grow
+	-moz-flex-grow: $grow
+	-ms-flex-grow: $grow
+	flex-grow: $grow
+
+
+
+=flex-shrink($shrink) 
+	-webkit-flex-shrink: $shrink
+	-moz-flex-shrink: $shrink
+	-ms-flex-shrink: $shrink
+	flex-shrink: $shrink
+
+
+
+=flex-basis($width) 
+	-webkit-flex-basis: $width
+	-moz-flex-basis: $width
+	-ms-flex-basis: $width
+	flex-basis: $width
+
+
+
+=justify-content($justify) 
+	-webkit-justify-content: $justify
+	-moz-justify-content: $justify
+	-ms-justify-content: $justify
+	justify-content: $justify
+	-ms-flex-pack: $justify
+
+
+
+=align-content($align) 
+	-webkit-align-content: $align
+	-moz-align-content: $align
+	-ms-align-content: $align
+	align-content: $align
+
+
+
+=align-items($align) 
+	-webkit-align-items: $align
+	-moz-align-items: $align
+	-ms-align-items: $align
+	align-items: $align
+
+
+
+=align-self($align) 
+	-webkit-align-self: $align
+	-moz-align-self: $align
+	-ms-align-self: $align
+	align-self: $align
+
+
+$main-color: #191919
+$red-color: #e53935
+$white-color: #fefefe
+$main-font: 'Montserrat', sans-serif
+
+body
+	background-color: $main-color
+	box-sizing:border-box
+	font-size: 10px
+
+
+.nav
+	+flexbox()
+	+flex-direction(column)
+	width: 100%
+	max-width: 250px
+
+	&__logo
+		display: block
+		width: 100%
+		&__header
+			font: 700 3em $main-font
+			text-transform: uppercase
+			padding: 50px 0
+			margin: 0 auto
+			text-align: center
+		&__link
+			text-decoration: none
+			color: $white-color
+			&--up
+				color: $red-color
+	&__sign
+		display: block
+		text-transform: uppercase
+		text-decoration: none
+		width: 100%
+		font: 700 1.6em/4em $main-font
+		background-color: $red-color
+		color: $white-color
+		text-align: center
+		position: relative
+
+		&:before
+			width: 16px
+			height: 16px
+			background: url('../img/steam-logo.png') no-repeat
+			content: ""
+			position: absolute
+			right: 27%
+			top: 35%
+	&__social
+		padding: 20px 0
+		+flexbox()
+		+flex-direction(row)
+		+justify-content(center)
+		&__items
+			
+			width: 18px
+			height: 18px
+			text-decoration: none
+			margin-left: 10px
+
+
+		.fb
+			background: url('../img/fb_icon.png') no-repeat
+		.twitter
+			background: url('../img/twitter_icon.png') no-repeat
+		.steam
+			background: url('../img/steam_icon.png') no-repeat
+
+	&__list
+		+flexbox()
+		+flex-direction(column)
+		list-style-type: none
+		margin: 0
+		padding: 0
+		&__items
+			border-top: 1px solid #212121
+			&__link
+				font: 300 1.6em/4em $main-font
+				color: $white-color
+				text-decoration: none
+				text-transform: uppercase
+
+			
+			
