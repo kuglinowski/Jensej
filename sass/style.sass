@@ -430,9 +430,9 @@ body
 			text-transform: uppercase
 			outline: none
 
-	// Refferals
+	// tos
 
-.refferals
+.tos
 	@extend .middle
 	padding: 0 15px
 	& h2
@@ -592,6 +592,32 @@ body
 				width: 21px
 				height: 21px
 				cursor: pointer
+			&.active
+				border-color: $red_color
+				&:before
+					content: ""
+					position: absolute
+					bottom: 0
+					right: 0
+					width: 0
+					height: 0
+					border-style: solid
+					border-width: 0 0 60px 60px
+					border-color: transparent transparent $red_color transparent
+					cursor: pointer
+					
+				&:after
+					content: ""
+					position: absolute
+					bottom: 5%
+					right: 5%
+					background: url('../img/white_plus_gun.png') no-repeat
+					background-size: auto
+					background-position: center
+					z-index: 2
+					width: 21px
+					height: 21px
+					cursor: pointer
 
 
 	&__counter
@@ -612,3 +638,5 @@ body
 			@extend .chat__sending__send
 			max-width: 260px
 			width: 100%
+
+.refferals

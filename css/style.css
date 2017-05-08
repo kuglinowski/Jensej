@@ -307,7 +307,7 @@ body {
         opacity: 0.3;
         border-bottom: 1px solid #464646; }
 
-.middle, .refferals {
+.middle, .tos {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -419,16 +419,16 @@ body {
       text-transform: uppercase;
       outline: none; }
 
-.refferals {
+.tos {
   padding: 0 15px; }
-  .refferals h2 {
+  .tos h2 {
     font: 700 3.2em/3em "Montserrat", sans-serif;
     color: #fefefe;
     border-bottom: 1px solid #2a2a2a; }
-  .refferals p {
+  .tos p {
     font: 300 1.3em/1.71em "Montserrat", sans-serif;
     color: #fefefe; }
-  .refferals h3 {
+  .tos h3 {
     text-transform: uppercase;
     color: #e53935;
     font: 700 2em/4em "Montserrat", sans-serif; }
@@ -637,6 +637,31 @@ body {
         width: 21px;
         height: 21px;
         cursor: pointer; }
+      .shop__inventory__item.active {
+        border-color: #e53935; }
+        .shop__inventory__item.active:before {
+          content: "";
+          position: absolute;
+          bottom: 0;
+          right: 0;
+          width: 0;
+          height: 0;
+          border-style: solid;
+          border-width: 0 0 60px 60px;
+          border-color: transparent transparent #e53935 transparent;
+          cursor: pointer; }
+        .shop__inventory__item.active:after {
+          content: "";
+          position: absolute;
+          bottom: 5%;
+          right: 5%;
+          background: url("../img/white_plus_gun.png") no-repeat;
+          background-size: auto;
+          background-position: center;
+          z-index: 2;
+          width: 21px;
+          height: 21px;
+          cursor: pointer; }
   .shop__counter {
     display: -webkit-box;
     display: -moz-box;
