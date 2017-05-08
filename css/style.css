@@ -37,9 +37,8 @@ body {
     display: block;
     width: 100%; }
     .nav__logo__header {
-      font: 700 3em "Montserrat", sans-serif;
+      font: 700 3em/3em "Montserrat", sans-serif;
       text-transform: uppercase;
-      padding: 50px 0;
       margin: 0 auto;
       text-align: center; }
     .nav__logo__link {
@@ -92,6 +91,65 @@ body {
       background: url("../img/twitter_icon.png") no-repeat; }
     .nav__social .steam {
       background: url("../img/steam_icon.png") no-repeat; }
+  .nav__logged {
+    border-top: 1px solid #2e2e2e;
+    border-bottom: 1px solid #2e2e2e;
+    padding: 25px 0; }
+    .nav__logged__top {
+      display: -webkit-box;
+      display: -moz-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      -webkit-justify-content: space-around;
+      -moz-justify-content: space-around;
+      -ms-justify-content: space-around;
+      justify-content: space-around;
+      -ms-flex-pack: space-around; }
+      .nav__logged__top img {
+        vertical-align: middle; }
+      .nav__logged__top__info {
+        display: -webkit-box;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-flex-direction: column;
+        -moz-flex-direction: column;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        -webkit-align-self: center;
+        -moz-align-self: center;
+        -ms-align-self: center;
+        align-self: center;
+        font: 400 1.6em "Montserrat", sans-serif; }
+        .nav__logged__top__info :first-child {
+          color: #e53935; }
+        .nav__logged__top__info :last-child {
+          color: #fefefe; }
+      .nav__logged__top__img {
+        align-self: center; }
+    .nav__logged__bottom {
+      display: -webkit-box;
+      display: -moz-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      -webkit-justify-content: space-around;
+      -moz-justify-content: space-around;
+      -ms-justify-content: space-around;
+      justify-content: space-around;
+      -ms-flex-pack: space-around;
+      -webkit-align-items: center;
+      -moz-align-items: center;
+      -ms-align-items: center;
+      align-items: center;
+      padding-top: 30px; }
+      .nav__logged__bottom span {
+        color: #fefefe;
+        font: 300 1.6em "Montserrat", sans-serif; }
+      .nav__logged__bottom img:last-child {
+        height: 16px; }
   .nav__list {
     display: -webkit-box;
     display: -moz-box;
@@ -242,18 +300,14 @@ body {
       font: 600 1.6em/3.19em "Montserrat", sans-serif;
       color: #fefefe; }
       .vision .history__item--left {
-        color: #017c4c; }
+        color: #717171; }
       .vision .history__item--right {
         color: #717171; }
-      .vision .history__item .red {
-        color: #e53935; }
-      .vision .history__item:nth-child(7) {
-        opacity: 0.5; }
       .vision .history__item:last-child {
         opacity: 0.3;
         border-bottom: 1px solid #464646; }
 
-.middle {
+.middle, .refferals {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -280,9 +334,7 @@ body {
     line-height: 3em;
     border-top: 1px solid #212121; }
     .players__table tbody tr td {
-      color: #017c4c; }
-      .players__table tbody tr td:first-of-type {
-        color: #717171; }
+      color: #717171; }
       .players__table tbody tr td:not(:first-of-type) {
         text-align: center; }
   .players__table__avatar {
@@ -290,7 +342,8 @@ body {
     padding-right: 20px; }
 
 .chat {
-  width: 340px; }
+  width: 340px;
+  position: relative; }
   .chat__title {
     width: 100%;
     font: 700 1.6em/4em "Montserrat", sans-serif;
@@ -337,5 +390,274 @@ body {
       .chat__area__message--box p {
         margin: 0;
         color: #717171; }
+  .chat__sending {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex; }
+    .chat__sending__msg {
+      font: 300 1.6em "Montserrat", sans-serif;
+      background: #212121;
+      border: 1px solid #2e2e2e;
+      color: #fefefe;
+      width: 255px;
+      height: 64px;
+      outline: none;
+      resize: none;
+      padding: 10px; }
+    .chat__sending__send, .shop__counter__button {
+      background-color: #e53935;
+      border: none;
+      width: 85px;
+      font: 700 1.6em/4em "Montserrat", sans-serif;
+      color: #fefefe;
+      text-transform: uppercase;
+      outline: none; }
+
+.refferals {
+  padding: 0 15px; }
+  .refferals h2 {
+    font: 700 3.2em/3em "Montserrat", sans-serif;
+    color: #fefefe;
+    border-bottom: 1px solid #2a2a2a; }
+  .refferals p {
+    font: 300 1.3em/1.71em "Montserrat", sans-serif;
+    color: #fefefe; }
+  .refferals h3 {
+    text-transform: uppercase;
+    color: #e53935;
+    font: 700 2em/4em "Montserrat", sans-serif; }
+
+.shop {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  -moz-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  padding-left: 15px; }
+  .shop__top {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: row;
+    -moz-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-justify-content: space-between;
+    -moz-justify-content: space-between;
+    -ms-justify-content: space-between;
+    justify-content: space-between;
+    -ms-flex-pack: space-between;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #2a2a2a; }
+    .shop__top__searchbox {
+      display: -webkit-box;
+      display: -moz-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      -webkit-flex-direction: column;
+      -moz-flex-direction: column;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      -webkit-justify-content: space-between;
+      -moz-justify-content: space-between;
+      -ms-justify-content: space-between;
+      justify-content: space-between;
+      -ms-flex-pack: space-between;
+      max-width: 425px;
+      width: 100%; }
+      .shop__top__searchbox__label {
+        font: 700 1.6em "Montserrat", sans-serif;
+        color: #fefefe;
+        padding: 40px 0; }
+      .shop__top__searchbox__search {
+        background-color: #212121;
+        font: 400 1.6em/3.75em "Montserrat", sans-serif;
+        color: #717171;
+        border: none;
+        outline: none;
+        padding-left: 30px; }
+    .shop__top__options {
+      display: -webkit-box;
+      display: -moz-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      -webkit-align-self: flex-end;
+      -moz-align-self: flex-end;
+      -ms-align-self: flex-end;
+      align-self: flex-end;
+      -webkit-justify-content: space-between;
+      -moz-justify-content: space-between;
+      -ms-justify-content: space-between;
+      justify-content: space-between;
+      -ms-flex-pack: space-between;
+      max-width: 270px;
+      width: 100%;
+      padding-right: 50px; }
+      .shop__top__options--refresh, .shop__top__options--sort {
+        background-color: transparent;
+        color: #fefefe;
+        border: none;
+        font: 700 1.6em/2em "Montserrat", sans-serif;
+        position: relative;
+        outline: none; }
+        .shop__top__options--refresh:before, .shop__top__options--sort:before {
+          content: "";
+          position: absolute;
+          background: url("../img/refresh_icon.png");
+          top: calc(50% - 8px);
+          right: -15%;
+          width: 18px;
+          height: 16px; }
+      .shop__top__options--sort {
+        cursor: pointer;
+        position: relative; }
+        .shop__top__options--sort:before {
+          right: -40%;
+          background: url("../img/arrow_down_icon.png");
+          top: calc(50% - 4px);
+          width: 10px;
+          height: 10px; }
+      .shop__top__options__open {
+        display: block;
+        position: absolute;
+        top: 35px;
+        right: -40px;
+        width: 150px;
+        height: auto;
+        border-radius: 15px;
+        border: 2px solid #2e2e2e;
+        background: #191919;
+        z-index: 1;
+        font: 300 0.875em/2em "Montserrat", sans-serif;
+        padding-left: 10px; }
+  .shop__inventory {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: row;
+    -moz-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-flex-wrap: wrap;
+    -moz-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-justify-content: space-around;
+    -moz-justify-content: space-around;
+    -ms-justify-content: space-around;
+    justify-content: space-around;
+    -ms-flex-pack: space-around;
+    overflow-y: auto;
+    max-height: 600px; }
+    .shop__inventory::-webkit-scrollbar {
+      width: 1em; }
+    .shop__inventory::-webkit-scrollbar-track {
+      -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3); }
+    .shop__inventory ::-webkit-scrollbar-thumb {
+      background-color: #2e2e2e;
+      outline: 1px solid #717171; }
+    .shop__inventory__item {
+      display: -webkit-box;
+      display: -moz-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      -webkit-flex-direction: column;
+      -moz-flex-direction: column;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      height: auto;
+      max-width: 165px;
+      width: 100%;
+      max-height: 168px;
+      border: 2px solid #717171;
+      margin-top: 30px;
+      position: relative;
+      cursor: pointer; }
+      .shop__inventory__item__top {
+        display: -webkit-box;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-justify-content: space-around;
+        -moz-justify-content: space-around;
+        -ms-justify-content: space-around;
+        justify-content: space-around;
+        -ms-flex-pack: space-around;
+        -webkit-align-items: center;
+        -moz-align-items: center;
+        -ms-align-items: center;
+        align-items: center;
+        font: 700 1.6em/2em "Montserrat", sans-serif;
+        color: #fefefe; }
+      .shop__inventory__item__name {
+        text-align: right;
+        padding: 0 15px;
+        font: 300 1.2em/1.5em "Montserrat", sans-serif;
+        color: #717171; }
+      .shop__inventory__item img {
+        padding-top: 12px; }
+      .shop__inventory__item:before {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 0 0 60px 60px;
+        border-color: transparent transparent #2e2e2e transparent;
+        cursor: pointer; }
+      .shop__inventory__item:after {
+        content: "";
+        position: absolute;
+        bottom: 5%;
+        right: 5%;
+        background: url("../img/grey_plus_gun.png") no-repeat;
+        background-size: auto;
+        background-position: center;
+        z-index: 2;
+        width: 21px;
+        height: 21px;
+        cursor: pointer; }
+  .shop__counter {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-justify-content: space-between;
+    -moz-justify-content: space-between;
+    -ms-justify-content: space-between;
+    justify-content: space-between;
+    -ms-flex-pack: space-between;
+    margin-top: 40px;
+    border-top: 1px solid #2a2a2a;
+    padding-top: 40px; }
+    .shop__counter__values__count {
+      font: 600 1.6em/2em "Montserrat", sans-serif;
+      color: #fefefe; }
+      .shop__counter__values__count--red {
+        color: #e53935; }
+    .shop__counter__button {
+      max-width: 260px;
+      width: 100%; }
 
 /*# sourceMappingURL=style.css.map */
