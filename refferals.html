@@ -77,11 +77,88 @@
         			<li class="nav__list__items"><a class="nav__list__items__link" href="#">Support</a></li>
         		</ul>
         	</nav>
-        	<section class="refferals container">
-        		
-				
+			<section class="refferals container">
+				<article class="refferals__top">
+					<div class="refferals__box">
+						<div class="refferals__box__group">
+							<label class="refferals__box__group--label">Use a code to get free 250 coins</label>
+	        				<div class="refferals__box__group__gr">
+	        					<input type="text" placeholder="Already used" class="refferals__box__group__gr--input">
+	        					<button class="refferals__box__group__gr--button">Use</button>
+	        				</div>
+						</div>
+						<div class="refferals__box__group">
+							<label class="refferals__box__group--label">Use a code to get free 250 coins</label>
+	        				<div class="refferals__box__group__gr">
+	        					<input type="text" placeholder="Already used" class="refferals__box__group__gr--input">
+	        					<button class="refferals__box__group__gr--button">Use</button>
+	        				</div>
+						</div>
+						<div class="refferals__box__group">
+							<label class="refferals__box__group--label">Use a code to get free 250 coins</label>
+	        				<button class="refferals__box__group__gr--button inline--button red">Use</button>
+						</div>
+						<div class="refferals__box__group">
+							<label class="refferals__box__group--label">Use a code to get free 250 coins</label>
+	        				<button class="refferals__box__group__gr--button inline--button">Use</button>
+						</div>
+					</div>
+					
 
+					<div class="refferals__box">
+						<div class="refferals__box__group">
+							<div class="refferals__box__group__rg">
+								<label class="refferals__box__group--label">Link your Twitter account for free 100 coins</label>
+								<input type="text" placeholder="twitter.com/skinup" class="refferals__box__group__gr--input  inline--input">
+								<button class="refferals__box__group__gr--button inline--button red">REDEEM</button>
+							</div>
+							<div class="refferals__box__group__rg__row">
+								<div class="refferals__box__group__rg__row--col">
+									<label class="refferals__box__group--label">People your have referrend</label>
+									<input type="text" placeholder="0" class="refferals__box__group__gr--input  inline--input">
+								</div>
+								<div class="refferals__box__group__rg__row--col">
+									<label class="refferals__box__group--label">Referral profit:</label>
+									<input type="text" placeholder="0" class="refferals__box__group__gr--input  inline--input">
+								</div>
+							
+							</div>
+							<button class="refferals__box__group__gr--button inline--button red">WITHDRAW</button>
+						</div>
+					</div>
+				</article>
+				<article class="refferals__bottom">
+					<h2 class="refferals__bottom--h2">Levels</h2>
+					<div class="refferals__bottom__row">
+						<div class="refferals__bottom__row__col bronze">
+							<img src="img/bronze_icon.png" alt="">
+							<span>0 - 50</span>
+							<h3>Bronze</h3>
+
+						</div>
+						<div class="refferals__bottom__row__col silver">
+							<img src="img/silver_icon.png" alt="">
+							<span>51 - 250</span>
+							<h3>Silver</h3>
+
+						</div>
+						<div class="refferals__bottom__row__col gold">
+							<img src="img/gold_icon.png" alt="">
+							<span>251 - 1500</span>
+							<h3>Gold</h3>
+
+						</div>
+						<div class="refferals__bottom__row__col diamond">
+							<img src="img/diamond_icon.png" alt="">
+							<span>1500 +</span>
+							<h3>Diamond</h3>
+
+						</div>
+					</div>
+
+				</article>
 			</section>
+
 			<section class="chat">
 				<div class="chat__title">CHat</div>
 				<div class="chat__area">
@@ -157,7 +234,7 @@
 					<div class="chat__area__message">
 						<img src="img/avatar_icon_bg.png" alt="">
 						<div class="chat__area__message--box">
-							<h3>Jensej</h3>
+							<h3><a href="#">jensej</a></h3>
 							<p>
 								Jasne, wal śmiało ;) Co tam 
 								potrzebujesz? W czym mogę Ci
@@ -176,9 +253,12 @@
 					</div>
 					
 				</div>
-				<div class="chat__sending">
+				<div class="chat__sending" style="display: none">
 					<textarea class="chat__sending__msg" name="send_mgs" id="send_mgs" cols="45" rows="5" placeholder="Your message..."></textarea>
 					<button class="chat__sending__send">Send</button>
+				</div>
+				<div class="chat__sending">
+					<a href="logowanie.html" class="chat__sending__sign">SIGN IN FOR CHAT <span class="chat__sending__sign--icon"></span></a>
 				</div>
 			</section>
         </main>

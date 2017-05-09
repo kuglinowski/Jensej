@@ -46,7 +46,7 @@ body {
       color: #fefefe; }
       .nav__logo__link--up {
         color: #e53935; }
-  .nav__sign, .vision .manual__button {
+  .nav__sign {
     display: block;
     text-transform: uppercase;
     text-decoration: none;
@@ -56,7 +56,7 @@ body {
     color: #fefefe;
     text-align: center;
     position: relative; }
-    .nav__sign:before, .vision .manual__button:before {
+    .nav__sign:before {
       width: 16px;
       height: 16px;
       background: url("../img/steam-logo.png") no-repeat;
@@ -107,7 +107,10 @@ body {
       justify-content: space-around;
       -ms-flex-pack: space-around; }
       .nav__logged__top img {
-        vertical-align: middle; }
+        vertical-align: middle;
+        max-width: 50px;
+        max-height: 50px;
+        border-radius: 50%; }
       .nav__logged__top__info {
         display: -webkit-box;
         display: -moz-box;
@@ -175,8 +178,7 @@ body {
         padding-left: 40px;
         margin: 0;
         display: block;
-        width: 100%;
-        height: 100%; }
+        width: 100%; }
         .nav__list__items__link:hover {
           background-color: #212121;
           transition: all 0.35s; }
@@ -261,6 +263,14 @@ body {
         color: #fefefe;
         padding-left: 20px; }
     .vision .manual__button {
+      display: block;
+      text-transform: uppercase;
+      text-decoration: none;
+      width: 100%;
+      font: 700 1.6em/4em "Montserrat", sans-serif;
+      background-color: #e53935;
+      color: #fefefe;
+      text-align: center;
       border: 0;
       margin-top: 35px; }
   .vision .history {
@@ -384,7 +394,8 @@ body {
       font: 400 1.4em "Montserrat", sans-serif;
       padding: 0 20px;
       width: 80%; }
-      .chat__area__message--box h3 {
+      .chat__area__message--box h3 a {
+        text-decoration: none;
         color: #fefefe;
         margin: 0 0 5px 0; }
       .chat__area__message--box p {
@@ -418,6 +429,24 @@ body {
       color: #fefefe;
       text-transform: uppercase;
       outline: none; }
+    .chat__sending__sign {
+      display: block;
+      text-transform: uppercase;
+      text-decoration: none;
+      width: 100%;
+      font: 700 1.6em/4em "Montserrat", sans-serif;
+      background-color: #e53935;
+      color: #fefefe;
+      text-align: center;
+      position: relative; }
+      .chat__sending__sign:before {
+        width: 16px;
+        height: 16px;
+        background: url("../img/steam-logo.png") no-repeat;
+        content: "";
+        position: absolute;
+        right: 21%;
+        top: calc(50% - 8px); }
 
 .tos {
   padding: 0 15px; }
@@ -684,5 +713,223 @@ body {
     .shop__counter__button {
       max-width: 260px;
       width: 100%; }
+
+.refferals {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  -moz-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column; }
+  .refferals__top {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: row;
+    -moz-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-justify-content: space-between;
+    -moz-justify-content: space-between;
+    -ms-justify-content: space-between;
+    justify-content: space-between;
+    -ms-flex-pack: space-between;
+    padding-top: 19px; }
+  .refferals__box {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    -moz-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    max-width: 555px;
+    width: 100%; }
+    .refferals__box__group {
+      display: -webkit-box;
+      display: -moz-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      -webkit-flex-direction: column;
+      -moz-flex-direction: column;
+      -ms-flex-direction: column;
+      flex-direction: column; }
+      .refferals__box__group--label {
+        font: 400 1.6em "Montserrat", sans-serif;
+        color: #fefefe;
+        margin: 21px 0 16px 0; }
+      .refferals__box__group__gr {
+        display: -webkit-box;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-flex-direction: row;
+        -moz-flex-direction: row;
+        -ms-flex-direction: row;
+        flex-direction: row;
+        -webkit-justify-content: space-between;
+        -moz-justify-content: space-between;
+        -ms-justify-content: space-between;
+        justify-content: space-between;
+        -ms-flex-pack: space-between; }
+        .refferals__box__group__gr--input {
+          width: 100%;
+          background-color: #212121;
+          border: 0;
+          font: 300 1.6em/3.75em "Montserrat", sans-serif;
+          color: #717171;
+          padding-left: 20px;
+          max-width: 360px;
+          outline: none; }
+        .refferals__box__group__gr--button {
+          background-color: #212121;
+          max-width: 165px;
+          width: 100%;
+          color: #fefefe;
+          font: 300 1.6em/3.75em "Montserrat", sans-serif;
+          text-transform: uppercase;
+          border: 1px solid #464646;
+          outline: none; }
+      .refferals__box__group .inline--button {
+        width: 100%;
+        max-width: 555px;
+        text-transform: uppercase;
+        font-weight: 600;
+        margin-top: 20px; }
+      .refferals__box__group .red {
+        background-color: #e53935;
+        color: #fefefe; }
+      .refferals__box__group .inline--input {
+        width: 100%;
+        max-width: 555px;
+        margin-top: 16px; }
+      .refferals__box__group .inline--label {
+        margin: 21px 0 16px; }
+      .refferals__box__group__rg {
+        margin-top: 21px; }
+        .refferals__box__group__rg__row {
+          display: -webkit-box;
+          display: -moz-box;
+          display: -ms-flexbox;
+          display: -webkit-flex;
+          display: flex;
+          -webkit-justify-content: space-between;
+          -moz-justify-content: space-between;
+          -ms-justify-content: space-between;
+          justify-content: space-between;
+          -ms-flex-pack: space-between;
+          margin-top: 80px; }
+          .refferals__box__group__rg__row--col {
+            max-width: 263px;
+            width: 100%; }
+      .refferals__box__group .half--input {
+        width: 100%;
+        max-width: 253px;
+        margin-bottom: 30px; }
+      .refferals__box__group .inline {
+        -webkit-flex-direction: column;
+        -moz-flex-direction: column;
+        -ms-flex-direction: column;
+        flex-direction: column; }
+        .refferals__box__group .inline--input {
+          max-width: 100%;
+          margin-bottom: 30px; }
+        .refferals__box__group .inline--half {
+          display: -webkit-box;
+          display: -moz-box;
+          display: -ms-flexbox;
+          display: -webkit-flex;
+          display: flex;
+          -webkit-justify-content: space-between;
+          -moz-justify-content: space-between;
+          -ms-justify-content: space-between;
+          justify-content: space-between;
+          -ms-flex-pack: space-between;
+          margin: 0; }
+          .refferals__box__group .inline--half--input {
+            max-width: 263px; }
+  .refferals__bottom {
+    margin-top: 40px;
+    border-top: 1px solid #212121; }
+    .refferals__bottom--h2 {
+      font: 600 1.6em "Montserrat", sans-serif;
+      color: #fefefe; }
+    .refferals__bottom__row {
+      display: -webkit-box;
+      display: -moz-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      -webkit-justify-content: space-around;
+      -moz-justify-content: space-around;
+      -ms-justify-content: space-around;
+      justify-content: space-around;
+      -ms-flex-pack: space-around; }
+      .refferals__bottom__row__col {
+        display: -webkit-box;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-flex-direction: column;
+        -moz-flex-direction: column;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        -webkit-align-items: center;
+        -moz-align-items: center;
+        -ms-align-items: center;
+        align-items: center;
+        max-width: 127px;
+        width: 100%;
+        padding-top: 30px; }
+    .refferals__bottom .bronze img {
+      max-width: 128px;
+      width: 100%; }
+    .refferals__bottom .bronze span {
+      font: 400 1.6em/2em "Montserrat", sans-serif;
+      color: #a38454; }
+    .refferals__bottom .bronze h3 {
+      font: 900 3em "Montserrat", sans-serif;
+      color: #a38454;
+      text-transform: uppercase; }
+    .refferals__bottom .silver img {
+      max-width: 128px;
+      width: 100%; }
+    .refferals__bottom .silver span {
+      font: 400 1.6em/2em "Montserrat", sans-serif;
+      color: #bfbfbf; }
+    .refferals__bottom .silver h3 {
+      font: 900 3em "Montserrat", sans-serif;
+      color: #bfbfbf;
+      text-transform: uppercase; }
+    .refferals__bottom .gold img {
+      max-width: 128px;
+      width: 100%; }
+    .refferals__bottom .gold span {
+      font: 400 1.6em/2em "Montserrat", sans-serif;
+      color: #ffbd20; }
+    .refferals__bottom .gold h3 {
+      font: 900 3em "Montserrat", sans-serif;
+      color: #ffbd20;
+      text-transform: uppercase; }
+    .refferals__bottom .diamond img {
+      max-width: 128px;
+      width: 100%; }
+    .refferals__bottom .diamond span {
+      font: 400 1.6em/2em "Montserrat", sans-serif;
+      color: #5ad5a5; }
+    .refferals__bottom .diamond h3 {
+      font: 900 3em "Montserrat", sans-serif;
+      color: #5ad5a5;
+      text-transform: uppercase; }
 
 /*# sourceMappingURL=style.css.map */

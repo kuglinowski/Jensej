@@ -192,6 +192,9 @@ body
 			
 			& img
 				vertical-align: middle
+				max-width: 50px
+				max-height: 50px
+				border-radius: 50%
 			&__info
 				+flexbox()
 				+flex-direction(column)
@@ -236,7 +239,6 @@ body
 				margin: 0
 				display: block
 				width: 100%
-				height: 100%
 				&:hover
 					background-color: #212121
 					transition: all 0.35s
@@ -297,7 +299,14 @@ body
 				padding-left: 20px
 
 		&__button
-			@extend .nav__sign
+			display: block
+			text-transform: uppercase
+			text-decoration: none
+			width: 100%
+			font: 700 1.6em/4em $main-font
+			background-color: $red-color
+			color: $white-color
+			text-align: center
 			border: 0
 			margin-top: 35px
 
@@ -399,8 +408,10 @@ body
 				width: 80%
 				
 				& h3
-					color: $white-color
-					margin: 0 0 5px 0
+					& a
+						text-decoration: none
+						color: $white-color
+						margin: 0 0 5px 0
 				& p 
 					margin: 0
 					color: #717171
@@ -429,7 +440,25 @@ body
 			color: $white_color
 			text-transform: uppercase
 			outline: none
+		&__sign
+			display: block
+			text-transform: uppercase
+			text-decoration: none
+			width: 100%
+			font: 700 1.6em/4em $main-font
+			background-color: $red-color
+			color: $white-color
+			text-align: center
+			position: relative
 
+			&:before
+				width: 16px
+				height: 16px
+				background: url('../img/steam-logo.png') no-repeat
+				content: ""
+				position: absolute
+				right: 21%
+				top: calc(50% - 8px)
 	// tos
 
 .tos
@@ -638,5 +667,153 @@ body
 			@extend .chat__sending__send
 			max-width: 260px
 			width: 100%
-
 .refferals
+	+flexbox()
+	+flex-direction(column)
+	&__top
+		+flexbox()
+		+flex-direction(row)
+		+justify-content(space-between)
+		padding-top: 19px
+	&__box
+		+flexbox()
+		+flex-direction(column)
+		max-width: 555px
+		width: 100%
+		&__group
+			+flexbox()
+			+flex-direction(column)
+			&--label
+				font: 400 1.6em $main_font
+				color: $white_color
+				margin: 21px 0 16px 0
+			&__gr
+				+flexbox()
+				+flex-direction(row)
+				+justify-content(space-between)
+				
+
+				&--input
+					width: 100%
+					background-color: #212121
+					border: 0
+					font: 300 1.6em/3.75em $main_font
+					color: #717171
+					padding-left: 20px
+					max-width: 360px
+					outline: none
+				&--button
+					background-color: #212121
+					max-width: 165px
+					width: 100%
+					color: $white_color
+					font: 300 1.6em/3.75em $main_font
+					text-transform: uppercase
+					border: 1px solid #464646
+					outline: none
+			& .inline--button
+				width: 100%
+				max-width: 555px
+				text-transform: uppercase
+				font-weight: 600
+				margin-top: 20px
+			& .red
+				background-color: $red_color
+				color: $white_color
+			& .inline--input
+				width: 100%
+				max-width: 555px
+				margin-top: 16px
+			& .inline--label
+				margin: 21px 0 16px
+			&__rg
+				margin-top: 21px
+				&__row
+					+flexbox()
+					+justify-content(space-between)
+					margin-top: 80px
+					&--col
+						max-width: 263px
+						width: 100%
+			& .half--input
+				width: 100%
+				max-width: 253px
+				margin-bottom: 30px
+				
+
+
+			& .inline
+				+flex-direction(column)
+				&--input
+					max-width: 100%
+					margin-bottom: 30px
+				&--half
+					+flexbox()
+					+justify-content(space-between)
+					margin: 0
+					&--input
+						max-width: 263px
+						
+					&--label
+						
+	&__bottom
+		margin-top: 40px
+		border-top: 1px solid #212121
+		&--h2
+			font: 600 1.6em $main_font
+			color: $white_color
+		&__row
+			+flexbox()
+			+justify-content(space-around)
+			&__col
+				+flexbox()
+				+flex-direction(column)
+				+align-items(center)
+				max-width: 127px
+				width: 100%
+				padding-top: 30px
+				
+		& .bronze
+			& img
+				max-width: 128px
+				width: 100%
+			& span
+				font: 400 1.6em/2em $main_font
+				color: #a38454
+			& h3
+				font: 900 3em  $main_font
+				color: #a38454
+				text-transform: uppercase
+		& .silver
+			& img
+				max-width: 128px
+				width: 100%
+			& span
+				font: 400 1.6em/2em $main_font
+				color: #bfbfbf
+			& h3
+				font: 900 3em  $main_font
+				color: #bfbfbf
+				text-transform: uppercase
+		& .gold
+			& img
+				max-width: 128px
+				width: 100%
+			& span
+				font: 400 1.6em/2em $main_font
+				color: #ffbd20
+			& h3
+				font: 900 3em  $main_font
+				color: #ffbd20
+				text-transform: uppercase
+		& .diamond
+			& img
+				max-width: 128px
+				width: 100%
+			& span
+				font: 400 1.6em/2em $main_font
+				color: #5ad5a5
+			& h3
+				font: 900 3em  $main_font
+				color: #5ad5a5
+				text-transform: uppercase
