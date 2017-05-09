@@ -21,6 +21,16 @@ body {
   -ms-flex-direction: row;
   flex-direction: row; }
 
+.one, .two, .three {
+  font: 400 1.6em "Montserrat", sans-serif;
+  color: #fefefe; }
+
+.select {
+  position: relative; }
+
+.select-open {
+  display: none; }
+
 .nav {
   display: -webkit-box;
   display: -moz-box;
@@ -372,7 +382,7 @@ body {
       top: calc(50% - 7px); }
   .chat__area {
     overflow-y: auto;
-    max-height: calc(100vh - 60px); }
+    max-height: calc(100vh - 124px); }
     .chat__area::-webkit-scrollbar {
       width: 1em; }
     .chat__area::-webkit-scrollbar-track {
@@ -413,7 +423,7 @@ body {
           color: #717171; }
   .chat__sending {
     width: 100%;
-    position: absolute;
+    position: relative;
     bottom: 0;
     right: 0;
     display: -webkit-box;
@@ -563,8 +573,7 @@ body {
           width: 18px;
           height: 16px; }
       .shop__top__options--sort {
-        cursor: pointer;
-        position: relative; }
+        cursor: pointer; }
         .shop__top__options--sort:before {
           right: -40%;
           background: url("../img/arrow_down_icon.png");
@@ -572,7 +581,6 @@ body {
           width: 10px;
           height: 10px; }
       .shop__top__options__open {
-        display: block;
         position: absolute;
         top: 35px;
         right: -40px;
@@ -582,8 +590,11 @@ body {
         border: 2px solid #2e2e2e;
         background: #191919;
         z-index: 1;
-        font: 300 0.875em/2em "Montserrat", sans-serif;
+        color: #fefefe;
+        font: 300 1.4em/1.8em "Montserrat", sans-serif;
         padding-left: 10px; }
+        .shop__top__options__open div {
+          cursor: pointer; }
   .shop__inventory {
     display: -webkit-box;
     display: -moz-box;
@@ -612,49 +623,74 @@ body {
     .shop__inventory ::-webkit-scrollbar-thumb {
       background-color: #2e2e2e;
       outline: 1px solid #717171; }
-    .shop__inventory__item {
+  .shop__item {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    -moz-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    height: auto;
+    max-width: 165px;
+    width: 100%;
+    max-height: 168px;
+    border: 2px solid #717171;
+    margin-top: 30px;
+    position: relative;
+    cursor: pointer; }
+    .shop__item__top {
       display: -webkit-box;
       display: -moz-box;
       display: -ms-flexbox;
       display: -webkit-flex;
       display: flex;
-      -webkit-flex-direction: column;
-      -moz-flex-direction: column;
-      -ms-flex-direction: column;
-      flex-direction: column;
-      height: auto;
-      max-width: 165px;
-      width: 100%;
-      max-height: 168px;
-      border: 2px solid #717171;
-      margin-top: 30px;
-      position: relative;
+      -webkit-justify-content: space-around;
+      -moz-justify-content: space-around;
+      -ms-justify-content: space-around;
+      justify-content: space-around;
+      -ms-flex-pack: space-around;
+      -webkit-align-items: center;
+      -moz-align-items: center;
+      -ms-align-items: center;
+      align-items: center;
+      font: 700 1.6em/2em "Montserrat", sans-serif;
+      color: #fefefe; }
+    .shop__item__name {
+      text-align: right;
+      padding: 0 15px;
+      font: 300 1.2em/1.5em "Montserrat", sans-serif;
+      color: #717171; }
+    .shop__item img {
+      padding-top: 12px; }
+    .shop__item:before {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 0 0 60px 60px;
+      border-color: transparent transparent #2e2e2e transparent;
       cursor: pointer; }
-      .shop__inventory__item__top {
-        display: -webkit-box;
-        display: -moz-box;
-        display: -ms-flexbox;
-        display: -webkit-flex;
-        display: flex;
-        -webkit-justify-content: space-around;
-        -moz-justify-content: space-around;
-        -ms-justify-content: space-around;
-        justify-content: space-around;
-        -ms-flex-pack: space-around;
-        -webkit-align-items: center;
-        -moz-align-items: center;
-        -ms-align-items: center;
-        align-items: center;
-        font: 700 1.6em/2em "Montserrat", sans-serif;
-        color: #fefefe; }
-      .shop__inventory__item__name {
-        text-align: right;
-        padding: 0 15px;
-        font: 300 1.2em/1.5em "Montserrat", sans-serif;
-        color: #717171; }
-      .shop__inventory__item img {
-        padding-top: 12px; }
-      .shop__inventory__item:before {
+    .shop__item:after {
+      content: "";
+      position: absolute;
+      bottom: 5%;
+      right: 5%;
+      background: url("../img/grey_plus_gun.png") no-repeat;
+      background-size: auto;
+      background-position: center;
+      z-index: 2;
+      width: 21px;
+      height: 21px;
+      cursor: pointer; }
+    .shop__item.active {
+      border-color: #e53935; }
+      .shop__item.active:before {
         content: "";
         position: absolute;
         bottom: 0;
@@ -663,45 +699,20 @@ body {
         height: 0;
         border-style: solid;
         border-width: 0 0 60px 60px;
-        border-color: transparent transparent #2e2e2e transparent;
+        border-color: transparent transparent #e53935 transparent;
         cursor: pointer; }
-      .shop__inventory__item:after {
+      .shop__item.active:after {
         content: "";
         position: absolute;
         bottom: 5%;
         right: 5%;
-        background: url("../img/grey_plus_gun.png") no-repeat;
+        background: url("../img/white_plus_gun.png") no-repeat;
         background-size: auto;
         background-position: center;
         z-index: 2;
         width: 21px;
         height: 21px;
         cursor: pointer; }
-      .shop__inventory__item.active {
-        border-color: #e53935; }
-        .shop__inventory__item.active:before {
-          content: "";
-          position: absolute;
-          bottom: 0;
-          right: 0;
-          width: 0;
-          height: 0;
-          border-style: solid;
-          border-width: 0 0 60px 60px;
-          border-color: transparent transparent #e53935 transparent;
-          cursor: pointer; }
-        .shop__inventory__item.active:after {
-          content: "";
-          position: absolute;
-          bottom: 5%;
-          right: 5%;
-          background: url("../img/white_plus_gun.png") no-repeat;
-          background-size: auto;
-          background-position: center;
-          z-index: 2;
-          width: 21px;
-          height: 21px;
-          cursor: pointer; }
   .shop__counter {
     display: -webkit-box;
     display: -moz-box;
@@ -942,5 +953,54 @@ body {
       font: 900 3em "Montserrat", sans-serif;
       color: #5ad5a5;
       text-transform: uppercase; }
+
+.user {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  -moz-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column; }
+  .user__row {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex; }
+    .user__row--top {
+      -webkit-justify-content: center;
+      -moz-justify-content: center;
+      -ms-justify-content: center;
+      justify-content: center;
+      -ms-flex-pack: center;
+      -webkit-align-items: center;
+      -moz-align-items: center;
+      -ms-align-items: center;
+      align-items: center;
+      padding: 40px 0; }
+    .user__row__col {
+      display: -webkit-box;
+      display: -moz-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      -webkit-flex-direction: column;
+      -moz-flex-direction: column;
+      -ms-flex-direction: column;
+      flex-direction: column; }
+      .user__row__col--top {
+        padding-left: 40px; }
+      .user__row__col span {
+        color: #fefefe;
+        font: 400 1.6em/2em "Montserrat", sans-serif; }
+      .user__row__col span:first-child {
+        color: #e53935;
+        font: 400 1.6em/2em "Montserrat", sans-serif; }
+        .user__row__col span:first-child a {
+          text-decoration: none;
+          color: #fefefe; }
 
 /*# sourceMappingURL=style.css.map */

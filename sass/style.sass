@@ -120,6 +120,17 @@ body
 .main
 	+flexbox()
 	+flex-direction(row)
+	
+	// Jensej Classes
+.one, .two, .three
+	font: 400 1.6em $main_font
+	color: $white_color
+	
+.select
+	position: relative
+.select-open
+	display: none
+
 
 	// Navigacja
 .nav
@@ -391,7 +402,7 @@ body
 			top: calc(50% - 7px)
 	&__area
 		overflow-y: auto
-		max-height: calc(100vh - 60px)
+		max-height: calc(100vh - 124px)
 		&::-webkit-scrollbar 
 			width: 1em
 
@@ -429,7 +440,7 @@ body
 					color: #717171
 	&__sending
 		width: 100%
-		position: absolute
+		position: relative
 		bottom: 0
 		right: 0
 		+flexbox()
@@ -545,7 +556,6 @@ body
 			&--sort
 				@extend .shop__top__options--refresh
 				cursor: pointer
-				position: relative
 
 				&:before
 					right: -40%
@@ -555,7 +565,6 @@ body
 					height: 10px
 
 			&__open
-				display: block
 				position: absolute
 				top: 35px
 				right: -40px
@@ -565,8 +574,11 @@ body
 				border: 2px solid #2e2e2e
 				background: #191919
 				z-index: 1
-				font: 300 0.875em/2em $main_font
+				color: $white_color
+				font: 300 1.4em/1.8em $main_font
 				padding-left: 10px
+				& div
+					cursor: pointer
 	&__inventory
 		+flexbox()
 		+flex-direction(row)
@@ -585,31 +597,57 @@ body
 			background-color: #2e2e2e
 			outline: 1px solid #717171
 
-		&__item
-			+flexbox()
-			+flex-direction(column)
-			height: auto
-			max-width: 165px
-			width: 100%
-			max-height: 168px
-			border: 2px solid #717171
-			margin-top: 30px
-			position: relative
-			cursor: pointer
+	&__item
+		+flexbox()
+		+flex-direction(column)
+		height: auto
+		max-width: 165px
+		width: 100%
+		max-height: 168px
+		border: 2px solid #717171
+		margin-top: 30px
+		position: relative
+		cursor: pointer
 			
-			&__top
-				+flexbox()
-				+justify-content(space-around)
-				+align-items(center)
-				font: 700 1.6em/2em $main_font
-				color: $white_color
-			&__name
-				text-align: right
-				padding: 0 15px
-				font: 300 1.2em/1.5em $main_font
-				color: #717171
-			& img
-				padding-top: 12px
+		&__top
+			+flexbox()
+			+justify-content(space-around)
+			+align-items(center)
+			font: 700 1.6em/2em $main_font
+			color: $white_color
+		&__name
+			text-align: right
+			padding: 0 15px
+			font: 300 1.2em/1.5em $main_font
+			color: #717171
+		& img
+			padding-top: 12px
+		&:before
+			content: ""
+			position: absolute
+			bottom: 0
+			right: 0
+			width: 0
+			height: 0
+			border-style: solid
+			border-width: 0 0 60px 60px
+			border-color: transparent transparent #2e2e2e transparent
+			cursor: pointer
+				
+		&:after
+			content: ""
+			position: absolute
+			bottom: 5%
+			right: 5%
+			background: url('../img/grey_plus_gun.png') no-repeat
+			background-size: auto
+			background-position: center
+			z-index: 2
+			width: 21px
+			height: 21px
+			cursor: pointer
+		&.active
+			border-color: $red_color
 			&:before
 				content: ""
 				position: absolute
@@ -619,7 +657,7 @@ body
 				height: 0
 				border-style: solid
 				border-width: 0 0 60px 60px
-				border-color: transparent transparent #2e2e2e transparent
+				border-color: transparent transparent $red_color transparent
 				cursor: pointer
 				
 			&:after
@@ -627,39 +665,13 @@ body
 				position: absolute
 				bottom: 5%
 				right: 5%
-				background: url('../img/grey_plus_gun.png') no-repeat
+				background: url('../img/white_plus_gun.png') no-repeat
 				background-size: auto
 				background-position: center
 				z-index: 2
 				width: 21px
 				height: 21px
 				cursor: pointer
-			&.active
-				border-color: $red_color
-				&:before
-					content: ""
-					position: absolute
-					bottom: 0
-					right: 0
-					width: 0
-					height: 0
-					border-style: solid
-					border-width: 0 0 60px 60px
-					border-color: transparent transparent $red_color transparent
-					cursor: pointer
-					
-				&:after
-					content: ""
-					position: absolute
-					bottom: 5%
-					right: 5%
-					background: url('../img/white_plus_gun.png') no-repeat
-					background-size: auto
-					background-position: center
-					z-index: 2
-					width: 21px
-					height: 21px
-					cursor: pointer
 
 
 	&__counter
@@ -830,3 +842,27 @@ body
 				font: 900 3em  $main_font
 				color: #5ad5a5
 				text-transform: uppercase
+.user
+	+flexbox()
+	+flex-direction(column)
+	&__row
+		+flexbox()
+		&--top
+			+justify-content(center)
+			+align-items(center)
+			padding: 40px 0
+		&__col
+			+flexbox()
+			+flex-direction(column)
+			&--top
+				padding-left: 40px
+			& span
+				color: $white_color
+				font: 400 1.6em/2em $main_font
+			& span:first-child
+				color: $red_color
+				font: 400 1.6em/2em $main_font
+				& a
+					text-decoration: none
+					color: $white_color
+					

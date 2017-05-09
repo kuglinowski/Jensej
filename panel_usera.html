@@ -77,10 +77,17 @@
         			<li class="nav__list__items"><a class="nav__list__items__link" href="#">Support</a></li>
         		</ul>
         	</nav>
-        	<section class="shop container">
-				
-
+			<section class="user container">
+				<div class="user__row user__row--top">
+					<img src="img/avatar_user.png" alt="">
+					<div class="user__row__col user__row__col--top">
+		        		<span>Welcome,<a href="#">Jensej</a></span>
+		        		<span>Balance: 40 <a href="#"><img src="img/coins_plus_icon.png" alt=""></a></span>
+		        				
+		        	</div>
+				</div>
 			</section>
+
 			<section class="chat">
 				<div class="chat__title">CHat</div>
 				<div class="chat__area">
@@ -156,7 +163,7 @@
 					<div class="chat__area__message">
 						<img src="img/avatar_icon_bg.png" alt="">
 						<div class="chat__area__message--box">
-							<h3>Jensej</h3>
+							<h3><a href="#">jensej</a></h3>
 							<p>
 								Jasne, wal śmiało ;) Co tam 
 								potrzebujesz? W czym mogę Ci
@@ -175,9 +182,12 @@
 					</div>
 					
 				</div>
-				<div class="chat__sending">
+				<div class="chat__sending" style="display: none">
 					<textarea class="chat__sending__msg" name="send_mgs" id="send_mgs" cols="45" rows="5" placeholder="Your message..."></textarea>
 					<button class="chat__sending__send">Send</button>
+				</div>
+				<div class="chat__sending">
+					<a href="logowanie.html" class="chat__sending__sign">SIGN IN FOR CHAT <span class="chat__sending__sign--icon"></span></a>
 				</div>
 			</section>
         </main>
