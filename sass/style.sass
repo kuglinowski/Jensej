@@ -375,7 +375,7 @@ body
 	position: relative
 	&__title
 		width: 100%
-		font: 700 1.6em/4em $main_font
+		font: 700 1.6em/3.75em $main_font
 		background-color: $red-color
 		text-transform: uppercase
 		text-align: center
@@ -390,6 +390,18 @@ body
 			right: 37%
 			top: calc(50% - 7px)
 	&__area
+		overflow-y: auto
+		max-height: calc(100vh - 60px)
+		&::-webkit-scrollbar 
+			width: 1em
+
+		&::-webkit-scrollbar-track
+			-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3)
+
+
+		::-webkit-scrollbar-thumb 
+			background-color: #2e2e2e
+			outline: 1px solid #717171
 		&__message
 			+flexbox()
 			+flex-direction(row)
@@ -436,16 +448,17 @@ body
 			background-color: $red_color
 			border: none
 			width: 85px
-			font: 700 1.6em/4em $main_font
+			font: 700 1.6em/3.75em $main_font
 			color: $white_color
 			text-transform: uppercase
 			outline: none
+			padding: 0
 		&__sign
 			display: block
 			text-transform: uppercase
 			text-decoration: none
 			width: 100%
-			font: 700 1.6em/4em $main-font
+			font: 700 1.6em/3.75em $main-font
 			background-color: $red-color
 			color: $white-color
 			text-align: center
