@@ -81,26 +81,26 @@
 				<article class="refferals__top">
 					<div class="refferals__box">
 						<div class="refferals__box__group">
-							<label class="refferals__box__group--label">Use a code to get free 250 coins</label>
+							<label for="get-coins" class="refferals__box__group--label">Use a code to get free 250 coins</label>
 	        				<div class="refferals__box__group__gr">
-	        					<input type="text" placeholder="Already used" class="refferals__box__group__gr--input">
-	        					<button class="refferals__box__group__gr--button">Use</button>
+	        					<input id="get-coins" type="text" placeholder="Already used" class="refferals__box__group__gr--input">
+	        					<button id="get-coins-button" class="refferals__box__group__gr--button">Use</button>
+	        				</div>
+						</div>
+						<div class="refferals__box__group">
+							<label for="set-code" class="refferals__box__group--label">Set your own code</label>
+	        				<div class="refferals__box__group__gr">
+	        					<input id="set-code" type="text" placeholder="ENTER YOUR CODE" class="refferals__box__group__gr--input">
+	        					<button id="set-code-button" class="refferals__box__group__gr--button">Set</button>
 	        				</div>
 						</div>
 						<div class="refferals__box__group">
 							<label class="refferals__box__group--label">Use a code to get free 250 coins</label>
-	        				<div class="refferals__box__group__gr">
-	        					<input type="text" placeholder="Already used" class="refferals__box__group__gr--input">
-	        					<button class="refferals__box__group__gr--button">Use</button>
-	        				</div>
+	        				<button data-api="free-coins" class="refferals__box__group__gr--button inline--button red free-coins blue">Use</button>
 						</div>
 						<div class="refferals__box__group">
-							<label class="refferals__box__group--label">Use a code to get free 250 coins</label>
-	        				<button class="refferals__box__group__gr--button inline--button red">Use</button>
-						</div>
-						<div class="refferals__box__group">
-							<label class="refferals__box__group--label">Use a code to get free 250 coins</label>
-	        				<button class="refferals__box__group__gr--button inline--button">Use</button>
+							<label class="refferals__box__group--label">Join our <a href="" target="_blank">SteamGroup</a> in your for 100 coins</label>
+	        				<button data-api="group-join" class="refferals__box__group__gr--button inline--button free-coins group-join blue">Use</button>
 						</div>
 					</div>
 					
@@ -115,15 +115,17 @@
 							<div class="refferals__box__group__rg__row">
 								<div class="refferals__box__group__rg__row--col">
 									<label class="refferals__box__group--label">People your have referrend</label>
-									<input type="text" placeholder="0" class="refferals__box__group__gr--input  inline--input">
+									<div type="text" placeholder="0" class="refferals__box__group__gr--input  inline--input value">0
+									</div>
 								</div>
 								<div class="refferals__box__group__rg__row--col">
 									<label class="refferals__box__group--label">Referral profit:</label>
-									<input type="text" placeholder="0" class="refferals__box__group__gr--input  inline--input">
+									<div class="refferals__box__group__gr--input  inline--input value">0
+									</div>
 								</div>
 							
 							</div>
-							<button class="refferals__box__group__gr--button inline--button red">WITHDRAW</button>
+							<button class="refferals__box__group__gr--button inline--button red withdraw-refs-button">WITHDRAW</button>
 						</div>
 					</div>
 				</article>

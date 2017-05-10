@@ -31,6 +31,43 @@ body {
 .select-open {
   display: none; }
 
+.balance {
+  color: #fefefe;
+  font: 600 1.6em "Montserrat", sans-serif; }
+
+.amaran-wrapper {
+  position: fixed;
+  z-index: 9999; }
+  .amaran-wrapper.bottom {
+    bottom: 0;
+    top: auto; }
+  .amaran-wrapper.left {
+    left: 0; }
+.amaran.colorful {
+  width: 300px;
+  min-height: 45px;
+  overflow: hidden;
+  background-color: transparent;
+  z-index: 1; }
+  .amaran.colorful .colorful-inner {
+    width: 100%;
+    min-height: 45px;
+    display: block;
+    position: relative;
+    background-color: #484860;
+    padding: 15px 25px 15px 15px;
+    color: #fff;
+    font-size: 14px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 4px; }
+.amaran-close {
+  color: #fff;
+  z-index: 2;
+  top: 8px;
+  right: 8px;
+  text-align: center;
+  line-height: 18px; }
+
 .nav {
   display: -webkit-box;
   display: -moz-box;
@@ -158,9 +195,6 @@ body {
       -ms-align-items: center;
       align-items: center;
       padding-top: 30px; }
-      .nav__logged__bottom span {
-        color: #fefefe;
-        font: 300 1.6em "Montserrat", sans-serif; }
       .nav__logged__bottom img:last-child {
         height: 16px; }
   .nav__list {
@@ -347,7 +381,9 @@ body {
   text-align: left; }
   .players__table thead th {
     line-height: 6em;
-    text-transform: uppercase; }
+    text-transform: uppercase;
+    text-align: left;
+    color: #fefefe; }
     .players__table thead th:not(:first-of-type) {
       text-align: center; }
   .players__table tbody tr {
@@ -382,7 +418,7 @@ body {
       top: calc(50% - 7px); }
   .chat__area {
     overflow-y: auto;
-    max-height: calc(100vh - 124px); }
+    height: calc(100vh - 124px); }
     .chat__area::-webkit-scrollbar {
       width: 1em; }
     .chat__area::-webkit-scrollbar-track {
@@ -609,11 +645,11 @@ body {
     -moz-flex-wrap: wrap;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
-    -webkit-justify-content: space-around;
-    -moz-justify-content: space-around;
-    -ms-justify-content: space-around;
-    justify-content: space-around;
-    -ms-flex-pack: space-around;
+    -webkit-justify-content: center;
+    -moz-justify-content: center;
+    -ms-justify-content: center;
+    justify-content: center;
+    -ms-flex-pack: center;
     overflow-y: auto;
     max-height: 600px; }
     .shop__inventory::-webkit-scrollbar {
@@ -623,74 +659,76 @@ body {
     .shop__inventory ::-webkit-scrollbar-thumb {
       background-color: #2e2e2e;
       outline: 1px solid #717171; }
-  .shop__item {
-    display: -webkit-box;
-    display: -moz-box;
-    display: -ms-flexbox;
-    display: -webkit-flex;
-    display: flex;
-    -webkit-flex-direction: column;
-    -moz-flex-direction: column;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    height: auto;
-    max-width: 165px;
-    width: 100%;
-    max-height: 168px;
-    border: 2px solid #717171;
-    margin-top: 30px;
-    position: relative;
-    cursor: pointer; }
-    .shop__item__top {
+    .shop__inventory .loading {
       display: -webkit-box;
       display: -moz-box;
       display: -ms-flexbox;
       display: -webkit-flex;
       display: flex;
-      -webkit-justify-content: space-around;
-      -moz-justify-content: space-around;
-      -ms-justify-content: space-around;
-      justify-content: space-around;
-      -ms-flex-pack: space-around;
       -webkit-align-items: center;
       -moz-align-items: center;
       -ms-align-items: center;
       align-items: center;
-      font: 700 1.6em/2em "Montserrat", sans-serif;
+      -webkit-justify-content: center;
+      -moz-justify-content: center;
+      -ms-justify-content: center;
+      justify-content: center;
+      -ms-flex-pack: center;
+      width: 100%;
+      height: 100%;
+      font: 900 3em "Montserrat", sans-serif;
       color: #fefefe; }
-    .shop__item__name {
-      text-align: right;
-      padding: 0 15px;
-      font: 300 1.2em/1.5em "Montserrat", sans-serif;
-      color: #717171; }
-    .shop__item img {
-      padding-top: 12px; }
-    .shop__item:before {
-      content: "";
-      position: absolute;
-      bottom: 0;
-      right: 0;
-      width: 0;
-      height: 0;
-      border-style: solid;
-      border-width: 0 0 60px 60px;
-      border-color: transparent transparent #2e2e2e transparent;
+    .shop__inventory__item {
+      display: -webkit-box;
+      display: -moz-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      -webkit-flex-direction: column;
+      -moz-flex-direction: column;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      -webkit-justify-content: space-between;
+      -moz-justify-content: space-between;
+      -ms-justify-content: space-between;
+      justify-content: space-between;
+      -ms-flex-pack: space-between;
+      height: auto;
+      width: 165px;
+      height: 168px;
+      border: 2px solid #717171;
+      margin: 15px 15px;
+      position: relative;
       cursor: pointer; }
-    .shop__item:after {
-      content: "";
-      position: absolute;
-      bottom: 5%;
-      right: 5%;
-      background: url("../img/grey_plus_gun.png") no-repeat;
-      background-size: auto;
-      background-position: center;
-      z-index: 2;
-      width: 21px;
-      height: 21px;
-      cursor: pointer; }
-    .shop__item.active {
-      border-color: #e53935; }
-      .shop__item.active:before {
+      .shop__inventory__item.junk {
+        opacity: 0.6; }
+      .shop__inventory__item:not(.junk) {
+        cursor: pointer; }
+      .shop__inventory__item__top {
+        display: -webkit-box;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-justify-content: space-around;
+        -moz-justify-content: space-around;
+        -ms-justify-content: space-around;
+        justify-content: space-around;
+        -ms-flex-pack: space-around;
+        -webkit-align-items: center;
+        -moz-align-items: center;
+        -ms-align-items: center;
+        align-items: center;
+        font: 700 1.6em/2em "Montserrat", sans-serif;
+        color: #fefefe; }
+      .shop__inventory__item__name {
+        text-align: center;
+        padding: 0 6px;
+        font: 300 1.2em/1.5em "Montserrat", sans-serif;
+        color: #717171; }
+      .shop__inventory__item img {
+        padding-top: 12px; }
+      .shop__inventory__item:before {
         content: "";
         position: absolute;
         bottom: 0;
@@ -699,20 +737,45 @@ body {
         height: 0;
         border-style: solid;
         border-width: 0 0 60px 60px;
-        border-color: transparent transparent #e53935 transparent;
+        border-color: transparent transparent #2e2e2e transparent;
         cursor: pointer; }
-      .shop__item.active:after {
+      .shop__inventory__item:after {
         content: "";
         position: absolute;
         bottom: 5%;
         right: 5%;
-        background: url("../img/white_plus_gun.png") no-repeat;
+        background: url("../img/grey_plus_gun.png") no-repeat;
         background-size: auto;
         background-position: center;
         z-index: 2;
         width: 21px;
         height: 21px;
         cursor: pointer; }
+      .shop__inventory__item.active {
+        border-color: #e53935; }
+        .shop__inventory__item.active:before {
+          content: "";
+          position: absolute;
+          bottom: 0;
+          right: 0;
+          width: 0;
+          height: 0;
+          border-style: solid;
+          border-width: 0 0 60px 60px;
+          border-color: transparent transparent #e53935 transparent;
+          cursor: pointer; }
+        .shop__inventory__item.active:after {
+          content: "";
+          position: absolute;
+          bottom: 5%;
+          right: 5%;
+          background: url("../img/white_plus_gun.png") no-repeat;
+          background-size: auto;
+          background-position: center;
+          z-index: 2;
+          width: 21px;
+          height: 21px;
+          cursor: pointer; }
   .shop__counter {
     display: -webkit-box;
     display: -moz-box;
@@ -788,6 +851,9 @@ body {
         font: 400 1.6em "Montserrat", sans-serif;
         color: #fefefe;
         margin: 21px 0 16px 0; }
+        .refferals__box__group--label a {
+          text-decoration: none;
+          color: #e53935; }
       .refferals__box__group__gr {
         display: -webkit-box;
         display: -moz-box;
@@ -1002,5 +1068,88 @@ body {
         .user__row__col span:first-child a {
           text-decoration: none;
           color: #fefefe; }
+      .user__row__col.stats-lost .value {
+        color: #e53935; }
+      .user__row__col.stats-profit .value {
+        color: #017c4c; }
+      .user__row__col.stats-won .value {
+        color: #fefefe; }
+    .user__row label {
+      font: 600 1.6em/3.75em "Montserrat", sans-serif;
+      color: #fefefe; }
+      .user__row label a {
+        text-decoration: none;
+        color: #e53935; }
+    .user__row.justify {
+      -webkit-justify-content: space-between;
+      -moz-justify-content: space-between;
+      -ms-justify-content: space-between;
+      justify-content: space-between;
+      -ms-flex-pack: space-between;
+      margin: 15px; }
+    .user__row__group {
+      display: -webkit-box;
+      display: -moz-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      -webkit-justify-content: space-between;
+      -moz-justify-content: space-between;
+      -ms-justify-content: space-between;
+      justify-content: space-between;
+      -ms-flex-pack: space-between; }
+      .user__row__group.group-input {
+        width: 100%;
+        max-width: 850px; }
+      .user__row__group input {
+        background-color: #212121;
+        color: #fefefe;
+        font: 400 1.6em/3.75em "Montserrat", sans-serif;
+        max-width: 652px;
+        width: 100%;
+        border: 0;
+        padding-left: 20px;
+        outline: none; }
+      .user__row__group button {
+        background-color: #212121;
+        color: #fefefe;
+        font: 400 1.6em/3.75em "Montserrat", sans-serif;
+        max-width: 165px;
+        width: 100%;
+        border: 1px solid #464646;
+        outline: none;
+        margin-left: 40px; }
+    .user__row.stats {
+      -webkit-justify-content: space-around;
+      -moz-justify-content: space-around;
+      -ms-justify-content: space-around;
+      justify-content: space-around;
+      -ms-flex-pack: space-around;
+      margin-top: 25px;
+      border-top: 1px solid #464646;
+      padding-top: 35px; }
+      .user__row.stats .label {
+        font: 900 3em/2em "Montserrat", sans-serif;
+        color: #fefefe;
+        text-transform: uppercase;
+        text-align: center; }
+      .user__row.stats .value {
+        font: 900 6em/1em "Montserrat", sans-serif;
+        text-transform: uppercase;
+        text-align: center; }
+  .user .over-table .table th {
+    line-height: 6em;
+    text-transform: uppercase;
+    text-align: left;
+    color: #fefefe; }
+    .user .over-table .table th:not(:first-of-type) {
+      text-align: center; }
+  .user .over-table tbody tr {
+    line-height: 3em;
+    border-top: 1px solid #212121; }
+    .user .over-table tbody tr td {
+      color: #e53935; }
+      .user .over-table tbody tr td:not(:first-of-type) {
+        text-align: center; }
 
 /*# sourceMappingURL=style.css.map */
