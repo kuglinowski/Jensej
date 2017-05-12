@@ -1,0 +1,284 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Jensej</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+        <!--[if lt IE 8]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+        <!-- Add your site or application content here -->
+        <main class="main">
+        	<nav class="nav" style="display: none">
+        		<div class="nav__logo">
+        			<h1 class="nav__logo__header"><a href="#" class="nav__logo__link" >SKIN <span class="nav__logo__link--up">UP</span></a></h1>
+        		</div>
+        		<a href="logowanie.html" class="nav__sign">Sign In <span class="nav__sign--icon"></span></a>
+        		<section class="nav__social">
+					<a href="#" class="nav__social__items fb"></a>
+					<a href="#" class="nav__social__items twitter"></a>
+					<a href="#" class="nav__social__items steam"></a>
+				</section>
+        		<ul class="nav__list">
+        			<li class="nav__list__items"><a class="nav__list__items__link active" href="index.html">Home</a></li>
+        			<li class="nav__list__items"><a class="nav__list__items__link" href="#">Roulette</a></li>
+        			<li class="nav__list__items"><a class="nav__list__items__link red" href="#">Deposit</a></li>
+        			<li class="nav__list__items"><a class="nav__list__items__link red" href="store.html">Store</a></li>
+        			<li class="nav__list__items"><a class="nav__list__items__link" href="refferals.html">Referrals</a></li>
+        			<li class="nav__list__items"><a class="nav__list__items__link" href="#">FAQ</a></li>
+        			<li class="nav__list__items"><a class="nav__list__items__link" href="#">TOS</a></li>
+        			<li class="nav__list__items"><a class="nav__list__items__link" href="#">Support</a></li>
+        		</ul>
+        	</nav>
+
+
+        	<nav class="nav">
+        		<div class="nav__logo">
+        			<h1 class="nav__logo__header"><a href="#" class="nav__logo__link" >SKIN <span class="nav__logo__link--up">UP</span></a></h1>
+        		</div>
+					<div class="nav__logged">
+					    <div class="nav__logged__top">
+	        				<img src="img/avatar_icon_bg.png" alt="">
+	        				<div class="nav__logged__top__info"><span>Welcome,</span><span>Jensej</span></div>
+	        				<div class="nav__logged__top__img">
+		        				<a href="#"><img src="img/options_icon.png" alt=""></a>
+		        				<a href="#"><img src="img/logout_icon.png" alt=""></a>
+	        				</div>
+	        			</div>
+	        			<div class="nav__logged__bottom">
+	        				<img src="img/coins_icon.png" alt="">
+	        				<span>Coins: 40</span>
+	        				<a href="#"><img src="img/coins_plus_icon.png" alt=""></a>
+	        			</div>
+	        		</div>
+
+        		<section class="nav__social">
+					<a href="#" class="nav__social__items fb"></a>
+					<a href="#" class="nav__social__items twitter"></a>
+					<a href="#" class="nav__social__items steam"></a>
+				</section>
+        		<ul class="nav__list">
+        			<li class="nav__list__items"><a class="nav__list__items__link active" href="index.html">Home</a></li>
+        			<li class="nav__list__items"><a class="nav__list__items__link" href="#">Roulette</a></li>
+        			<li class="nav__list__items"><a class="nav__list__items__link red" href="#">Deposit</a></li>
+        			<li class="nav__list__items"><a class="nav__list__items__link red" href="store.html">Store</a></li>
+        			<li class="nav__list__items"><a class="nav__list__items__link" href="refferals.html">Referral</a></li>
+        			<li class="nav__list__items"><a class="nav__list__items__link" href="#">FAQ</a></li>
+        			<li class="nav__list__items"><a class="nav__list__items__link" href="#">TOS</a></li>
+        			<li class="nav__list__items"><a class="nav__list__items__link" href="#">Support</a></li>
+        		</ul>
+        	</nav>
+			<section class="roulette container">
+				<div class="controls">
+            		<div class="color-select">
+		                <button class="btn-multi active" data-value="red">
+		                    <img src="img/coin-t.png">
+		                </button>
+		                <button class="btn-multi" data-value="green">
+		                    <img src="img/coin_up.png">
+		                </button>
+		                <button class="btn-multi" data-value="black">
+		                    <img src="img/coin_ct.png">
+		                </button>
+           			</div>
+		            <div class="inputs-area">
+		                <div class="buttons">
+		                    <div class="button" data-action="clear">Clear</div>
+		                    <div class="button" data-action="last">Last</div>
+		                    <div class="button" data-action="100+"><span>+</span>100</div>
+		                    <div class="button" data-action="1000+"><span>+</span>1K</div>
+		                    <div class="button" data-action="10000+"><span>+</span>10K</div>
+		                    <div class="button" data-action="1/2">1<span>/</span>2</div>
+		                    <div class="button" data-action="x2"><span>X</span>2</div>
+		                    <div class="button" data-action="max">Max</div>
+		                </div>
+		                <div class="amount">
+		                    <p>Enter the amount</p>
+		                    <input id="minesBet" class="value" placeholder="Your amount">
+		                </div>
+
+		            </div>
+		            <button class="btn-play">Bet</button>
+            		<div class="play">
+            		</div>
+        		</div>
+
+				<div class="balance-latest">
+           			<div class="balance" data-balance="0">Balance: 
+           				<span class="value">0</span> 
+           				<a href="">
+           					<img src="img/coins_plus_icon.png" alt="">
+           				</a>
+           			</div>
+		            <div class="latest-right">
+		                <p>Latest results: </p>
+		                <div class="latest"><div class="black-last-color last"></div><div class="black-last-color last"></div><div class="black-last-color last"></div><div class="black-last-color last"></div><div class="red-last-color last"></div><div class="red-last-color last"></div><div class="red-last-color last"></div><div class="black-last-color last"></div><div class="red-last-color last"></div><div class="red-last-color last"></div></div>
+		            </div>
+        		</div>
+        		<div class="roulette-wheel-outer">
+            		<div class="rolling">
+               			 <div class="rolling-inner">
+               			 </div>
+            		</div>
+            		<div class="roulette-wheel">
+                		<div class="pointer"></div>
+            		</div>
+        		</div>
+				<div class="roulette-info">Round hash: b508c6850b2647fc67e6ba11766e17109cf7f8696e52075cfeab643122f0c6a0</div>
+
+				<div class="bets">
+           			<div class="bet-box red-bet">
+		                <div class="bet-info">
+		                    <div class="bet-label">
+		                    	<img src="img/coin-t.png"> Terrorists 
+		                    	
+		                    </div>
+		                    <div class="total-bet">
+		                    	<span class="red-total total-bet-amount" data-value="0">0</span>
+		                    </div>
+                		</div>
+                		<div class="player-bets"></div>
+            		</div>
+		            <div class="bet-box green-bet">
+		                <div class="bet-info">
+		                    <div class="bet-label">
+			                    <img src="img/coin_up.png"> Up!
+			                    
+		                    </div>
+		                    <div class="total-bet">
+		                    	<span class="green-total total-bet-amount" data-value="0">0</span>
+		                    </div>
+		                </div>
+		                <div class="player-bets"></div>
+		            </div>
+		            <div class="bet-box black-bet">
+		                <div class="bet-info">
+		                    <div class="bet-label">
+			                    <img src="img/coin_ct.png"> Counter T
+			                    
+		                    </div>
+		                    <div class="total-bet">
+		                    	<span class="black-total total-bet-amount" data-value="0">0</span>
+		                    </div>
+		                </div>
+		                <div class="player-bets"></div>
+		            </div>
+		        </div>
+			</section>
+
+			<section class="chat">
+				<div class="chat__title">CHat</div>
+				<div class="chat__area">
+					<div class="chat__area__message">
+						<img src="img/avatar_icon_bg.png" alt="">
+						<div class="chat__area__message--box">
+							<h3>Jensej</h3>
+							<p>
+								Jasne, wal śmiało ;) Co tam 
+								potrzebujesz? W czym mogę Ci
+								pomóc?
+							</p>
+						</div>
+					</div>
+					<div class="chat__area__message">
+						<img src="img/avatar_icon_bg.png" alt="">
+						<div class="chat__area__message--box">
+							<h3>Jensej</h3>
+							<p>
+								Cześć, mogę o coś zapytać?
+							</p>
+						</div>
+					</div>
+					<div class="chat__area__message">
+						<img src="img/avatar_icon_bg.png" alt="">
+						<div class="chat__area__message--box">
+							<h3>Jensej</h3>
+							<p>
+								Jasne, wal śmiało ;) Co tam 
+								potrzebujesz? W czym mogę Ci
+								pomóc?
+							</p>
+						</div>
+					</div>
+					<div class="chat__area__message">
+						<img src="img/avatar_icon_bg.png" alt="">
+						<div class="chat__area__message--box">
+							<h3>Jensej</h3>
+							<p>
+								Cześć, mogę o coś zapytać?
+							</p>
+						</div>
+					</div>
+					<div class="chat__area__message">
+						<img src="img/avatar_icon_bg.png" alt="">
+						<div class="chat__area__message--box">
+							<h3>Jensej</h3>
+							<p>
+								Cześć, mogę o coś zapytać?
+							</p>
+						</div>
+					</div>
+					<div class="chat__area__message">
+						<img src="img/avatar_icon_bg.png" alt="">
+						<div class="chat__area__message--box">
+							<h3>Jensej</h3>
+							<p>
+								Jasne, wal śmiało ;) Co tam 
+								potrzebujesz? W czym mogę Ci
+								pomóc?
+							</p>
+						</div>
+					</div>
+					<div class="chat__area__message">
+						<img src="img/avatar_icon_bg.png" alt="">
+						<div class="chat__area__message--box">
+							<h3>Jensej</h3>
+							<p>
+								Cześć, mogę o coś zapytać?
+							</p>
+						</div>
+					</div>
+					<div class="chat__area__message">
+						<img src="img/avatar_icon_bg.png" alt="">
+						<div class="chat__area__message--box">
+							<h3><a href="#">jensej</a></h3>
+							<p>
+								Jasne, wal śmiało ;) Co tam 
+								potrzebujesz? W czym mogę Ci
+								pomóc?
+							</p>
+						</div>
+					</div>
+					<div class="chat__area__message">
+						<img src="img/avatar_icon_bg.png" alt="">
+						<div class="chat__area__message--box">
+							<h3>Jensej</h3>
+							<p>
+								Cześć, mogę o coś zapytać?
+							</p>
+						</div>
+					</div>
+					
+				</div>
+				<div class="chat__sending" style="display: none">
+					<textarea class="chat__sending__msg" name="send_mgs" id="send_mgs" cols="45" rows="5" placeholder="Your message..."></textarea>
+					<button class="chat__sending__send">Send</button>
+				</div>
+				<div class="chat__sending">
+					<a href="logowanie.html" class="chat__sending__sign">SIGN IN FOR CHAT <span class="chat__sending__sign--icon"></span></a>
+				</div>
+			</section>
+        </main>
+
+     
+    </body>
+</html>

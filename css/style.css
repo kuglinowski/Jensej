@@ -399,7 +399,8 @@ body {
 
 .chat {
   width: 340px;
-  position: relative; }
+  position: relative;
+  height: 100%; }
   .chat__title {
     width: 100%;
     font: 700 1.6em/3.75em "Montserrat", sans-serif;
@@ -441,19 +442,21 @@ body {
       -ms-align-items: center;
       align-items: center;
       border-top: 1px solid #212121;
-      padding: 15px 0; }
+      padding: 5px 0; }
       .chat__area__message img {
         border-radius: 50%;
-        width: 50px;
-        height: 50px; }
+        width: 40px;
+        height: 40px; }
       .chat__area__message--box {
-        font: 400 1.4em "Montserrat", sans-serif;
+        font: 400 1.2em "Montserrat", sans-serif;
         padding: 0 20px;
         width: 80%; }
-        .chat__area__message--box h3 a {
-          text-decoration: none;
-          color: #fefefe;
-          margin: 0 0 5px 0; }
+        .chat__area__message--box h3 {
+          margin: 0; }
+          .chat__area__message--box h3 a {
+            text-decoration: none;
+            color: #fefefe;
+            margin: 0 0 5px 0; }
         .chat__area__message--box p {
           margin: 0;
           color: #717171; }
@@ -1047,6 +1050,9 @@ body {
       -ms-align-items: center;
       align-items: center;
       padding: 40px 0; }
+      .user__row--top img {
+        max-width: 166px;
+        border-radius: 50%; }
     .user__row__col {
       display: -webkit-box;
       display: -moz-box;
@@ -1127,7 +1133,7 @@ body {
       -ms-flex-pack: space-around;
       margin-top: 25px;
       border-top: 1px solid #464646;
-      padding-top: 35px; }
+      padding: 35px 0; }
       .user__row.stats .label {
         font: 900 3em/2em "Montserrat", sans-serif;
         color: #fefefe;
@@ -1137,19 +1143,355 @@ body {
         font: 900 6em/1em "Montserrat", sans-serif;
         text-transform: uppercase;
         text-align: center; }
-  .user .over-table .table th {
-    line-height: 6em;
-    text-transform: uppercase;
-    text-align: left;
-    color: #fefefe; }
-    .user .over-table .table th:not(:first-of-type) {
-      text-align: center; }
-  .user .over-table tbody tr {
-    line-height: 3em;
-    border-top: 1px solid #212121; }
-    .user .over-table tbody tr td {
-      color: #e53935; }
-      .user .over-table tbody tr td:not(:first-of-type) {
+  .user .over-table .table {
+    border-top: 1px solid #212121;
+    border-bottom: 1px solid #212121; }
+    .user .over-table .table thead {
+      border-top: 1px solid #212121; }
+    .user .over-table .table th {
+      line-height: 6em;
+      text-transform: uppercase;
+      text-align: left;
+      color: #fefefe; }
+      .user .over-table .table th:not(:first-of-type) {
         text-align: center; }
+  .user .over-table tbody {
+    border-bottom: 1px solid #212121; }
+    .user .over-table tbody tr {
+      line-height: 1.3em;
+      border-top: 1px solid #212121; }
+      .user .over-table tbody tr td {
+        color: #e53935; }
+        .user .over-table tbody tr td:not(:first-of-type) {
+          text-align: center; }
+
+.dataTables_length {
+  float: left;
+  width: 50%;
+  margin: 20px 0; }
+  .dataTables_length label {
+    font: 400 1.6em/3em "Montserrat", sans-serif;
+    color: #fefefe; }
+    .dataTables_length label select {
+      background-color: #212121;
+      padding: 0;
+      border: 0;
+      outline: none;
+      margin: 5px; }
+
+.dataTables_filter {
+  float: right;
+  width: 50%;
+  text-align: right;
+  margin: 20px 0; }
+  .dataTables_filter label {
+    color: #fefefe;
+    font: 400 1.6em/3.75em "Montserrat", sans-serif; }
+    .dataTables_filter label input {
+      background-color: #212121;
+      line-height: 3.75em;
+      border: none;
+      outline: none;
+      max-width: 262px;
+      width: 100%;
+      margin-left: 10px;
+      padding-left: 15px; }
+
+.dataTables_info {
+  font: 600 1.6em/3em "Montserrat", sans-serif;
+  color: #fefefe;
+  float: left;
+  margin: 15px 0; }
+
+.dataTables_paginate {
+  float: right;
+  font: 600 1.6em/3em "Monterrat", sans-serif;
+  color: #fefefe;
+  margin: 15px 0; }
+  .dataTables_paginate .paginate_button {
+    margin-right: 30px; }
+    .dataTables_paginate .paginate_button:last-child {
+      color: #017c4c; }
+
+.sorting {
+  background: url("../img/sort_both.png") right center no-repeat;
+  cursor: pointer; }
+
+.sorting_asc {
+  background: url("../img/sort_asc.png") right center no-repeat;
+  cursor: pointer; }
+
+.sorting_desc {
+  background: url("../img/sort_desc.png") right center no-repeat; }
+
+.roulette {
+  margin-top: 40px; }
+  .roulette .controls {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    padding: 40px 0;
+    border-bottom: 1px solid #212121; }
+    .roulette .controls .color-select {
+      display: -webkit-box;
+      display: -moz-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      -webkit-align-items: center;
+      -moz-align-items: center;
+      -ms-align-items: center;
+      align-items: center;
+      -webkit-justify-content: center;
+      -moz-justify-content: center;
+      -ms-justify-content: center;
+      justify-content: center;
+      -ms-flex-pack: center;
+      width: 30%; }
+      .roulette .controls .color-select .btn-multi {
+        margin: 0 10px;
+        cursor: pointer;
+        background: transparent;
+        outline: none;
+        border: none; }
+        .roulette .controls .color-select .btn-multi img {
+          width: 76px;
+          height: auto;
+          max-width: 100%;
+          border-radius: 50%; }
+      .roulette .controls .color-select .active img {
+        box-shadow: 0 0 3px 3px #58b948; }
+    .roulette .controls .inputs-area {
+      width: 55%; }
+      .roulette .controls .inputs-area .buttons {
+        display: -webkit-box;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-align-items: center;
+        -moz-align-items: center;
+        -ms-align-items: center;
+        align-items: center;
+        -webkit-justify-content: flex-start;
+        -moz-justify-content: flex-start;
+        -ms-justify-content: flex-start;
+        justify-content: flex-start;
+        -ms-flex-pack: flex-start; }
+        .roulette .controls .inputs-area .buttons .button {
+          font: 600 1.6em/3.75em "Montserrat", sans-serif;
+          color: #fefefe;
+          border: 1px solid #464646;
+          padding: 0 20px;
+          text-transform: uppercase;
+          cursor: pointer;
+          background-color: #212121; }
+      .roulette .controls .inputs-area .amount {
+        display: -webkit-box;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-justify-content: space-between;
+        -moz-justify-content: space-between;
+        -ms-justify-content: space-between;
+        justify-content: space-between;
+        -ms-flex-pack: space-between;
+        margin-top: 20px; }
+        .roulette .controls .inputs-area .amount p {
+          font: 600 1.6em/3.75em "Montserrat", sans-serif;
+          color: #fefefe;
+          margin: 0; }
+        .roulette .controls .inputs-area .amount input {
+          font: 600 1.6em/3.75em "Montserrat", sans-serif;
+          color: #717171;
+          border: none;
+          background-color: #212121;
+          outline: none;
+          margin: 0;
+          padding: 0 20px; }
+    .roulette .controls .btn-play {
+      border: none;
+      outline: none;
+      padding: 0;
+      margin: 0;
+      background-color: #e53935;
+      font: 600 1.6em/8.75em "Montserrat", sans-serif;
+      color: #fefefe;
+      width: 100%;
+      max-width: 165px;
+      margin-left: 30px; }
+  .roulette .balance-latest {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-align-items: center;
+    -moz-align-items: center;
+    -ms-align-items: center;
+    align-items: center;
+    padding: 40px 0; }
+    .roulette .balance-latest .balance {
+      font: 600 1.6em/3.75em "Montserrat", sans-serif;
+      border-right: 1px solid #212121;
+      padding-right: 50px;
+      width: 15%; }
+      .roulette .balance-latest .balance span {
+        padding-right: 5px; }
+    .roulette .balance-latest .latest-right {
+      display: -webkit-box;
+      display: -moz-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      -webkit-justify-content: space-around;
+      -moz-justify-content: space-around;
+      -ms-justify-content: space-around;
+      justify-content: space-around;
+      -ms-flex-pack: space-around;
+      width: 85%;
+      font: 600 1.6em/3.75em "Montserrat", sans-serif;
+      color: #fefefe;
+      padding: 0 35px 0 50px; }
+      .roulette .balance-latest .latest-right p {
+        margin: 0; }
+      .roulette .balance-latest .latest-right .latest {
+        display: -webkit-box;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-align-items: center;
+        -moz-align-items: center;
+        -ms-align-items: center;
+        align-items: center;
+        -webkit-justify-content: space-around;
+        -moz-justify-content: space-around;
+        -ms-justify-content: space-around;
+        justify-content: space-around;
+        -ms-flex-pack: space-around; }
+        .roulette .balance-latest .latest-right .latest .red-last-color {
+          background-image: url("../img/coin-t.png"); }
+        .roulette .balance-latest .latest-right .latest .black-last-color {
+          background-image: url("../img/coin_ct.png"); }
+        .roulette .balance-latest .latest-right .latest .green-last-color {
+          background-image: url("../img/coin_up.png"); }
+        .roulette .balance-latest .latest-right .latest .last {
+          width: 50px;
+          height: 50px;
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: contain;
+          margin: 0 10px; }
+  .roulette .roulette-wheel-outer {
+    position: relative;
+    background-color: #2a2a2a;
+    padding: 1px 0;
+    border-top: 1px solid #2a2a2a;
+    border-bottom: 1px solid #2a2a2a; }
+    .roulette .roulette-wheel-outer .rolling {
+      display: -webkit-box;
+      display: -moz-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      -webkit-justify-content: center;
+      -moz-justify-content: center;
+      -ms-justify-content: center;
+      justify-content: center;
+      -ms-flex-pack: center;
+      -webkit-align-items: center;
+      -moz-align-items: center;
+      -ms-align-items: center;
+      align-items: center;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0; }
+      .roulette .roulette-wheel-outer .rolling .rolling-inner {
+        font: 600 4em "Montserrat", sans-serif;
+        color: #fefefe;
+        text-align: center; }
+    .roulette .roulette-wheel-outer .roulette-wheel {
+      display: -webkit-box;
+      display: -moz-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      -webkit-align-items: center;
+      -moz-align-items: center;
+      -ms-align-items: center;
+      align-items: center;
+      -webkit-justify-content: center;
+      -moz-justify-content: center;
+      -ms-justify-content: center;
+      justify-content: center;
+      -ms-flex-pack: center;
+      background-image: url("../img/roulette.png");
+      max-width: 1980px;
+      height: 132px;
+      background-position: center;
+      background-repeat: no-repeat;
+      margin: 0 auto; }
+      .roulette .roulette-wheel-outer .roulette-wheel .pointer {
+        width: 3px;
+        height: 80%;
+        background-color: #fefefe; }
+  .roulette .roulette-info {
+    font: 400 1.6em/5em "Montserrat", sans-serif;
+    color: #717171;
+    text-align: center; }
+  .roulette .bets {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-justify-content: space-between;
+    -moz-justify-content: space-between;
+    -ms-justify-content: space-between;
+    justify-content: space-between;
+    -ms-flex-pack: space-between; }
+    .roulette .bets .bet-box {
+      width: calc(100% / 3 - 60px / 3); }
+      .roulette .bets .bet-box .bet-info {
+        display: -webkit-box;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex; }
+        .roulette .bets .bet-box .bet-info .bet-label {
+          display: -webkit-box;
+          display: -moz-box;
+          display: -ms-flexbox;
+          display: -webkit-flex;
+          display: flex;
+          -webkit-align-items: center;
+          -moz-align-items: center;
+          -ms-align-items: center;
+          align-items: center;
+          font: 400 1.6em/5.75em "Montserrat", sans-serif;
+          text-transform: uppercase;
+          width: 70%; }
+          .roulette .bets .bet-box .bet-info .bet-label img {
+            width: 40px;
+            height: 40px;
+            margin-right: 18px; }
+        .roulette .bets .bet-box .bet-info .total-bet {
+          width: 30%;
+          font: 400 1.6em/5.75em "Montserrat", sans-serif;
+          text-transform: uppercase;
+          text-align: right;
+          padding-right: 15px; }
+    .roulette .bets .red-bet {
+      color: #b4a36d; }
+    .roulette .bets .green-bet {
+      color: #e53935; }
+    .roulette .bets .black-bet {
+      color: #5d7990; }
 
 /*# sourceMappingURL=style.css.map */

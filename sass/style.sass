@@ -425,6 +425,7 @@ body
 .chat
 	width: 340px
 	position: relative
+	height: 100%
 	&__title
 		width: 100%
 		font: 700 1.6em/3.75em $main_font
@@ -459,19 +460,20 @@ body
 			+flex-direction(row)
 			+align-items(center)
 			border-top: 1px solid #212121
-			padding: 15px 0
+			padding: 5px 0
 			& img
 				border-radius: 50%
-				width: 50px
-				height: 50px
+				width: 40px
+				height: 40px
 			
 				
 			&--box
-				font: 400 1.4em $main_font
+				font: 400 1.2em $main_font
 				padding: 0 20px
 				width: 80%
 				
 				& h3
+					margin: 0
 					& a
 						text-decoration: none
 						color: $white-color
@@ -907,6 +909,9 @@ body
 			+justify-content(center)
 			+align-items(center)
 			padding: 40px 0
+			& img
+				max-width: 166px
+				border-radius: 50%
 		&__col
 			+flexbox()
 			+flex-direction(column)
@@ -973,7 +978,7 @@ body
 			+justify-content(space-around)
 			margin-top: 25px
 			border-top: 1px solid #464646
-			padding-top: 35px
+			padding: 35px 0
 
 			& .label
 				font: 900 3em/2em $main_font
@@ -984,49 +989,13 @@ body
 				font: 900 6em/1em $main_font
 				text-transform: uppercase
 				text-align: center
-	// & .over-table
-	// 	margin-bottom: 30px
-	// 	& .box-label
-	// 		padding-bottom: 0
-	// 		font-size: 1.6em
-	// 	& .table
-	// 		margin-top: 20px
-	// 		font: 600 1.6em $main_font
-	// 		& .dataTables_wrapper
-	// 			position: relative
-	// 			zoom: 1
-	// 			clear: both
-	// 			& .dataTables_length
-	// 				margin: 6px 12px
-	// 				float: left
-	// 				& label
-	// 					cursor: default
-	// 			& .dataTables_filter
-	// 				margin: 6px 12px
-	// 				& input
-	// 					width: 250px
-	// 					font: 400 1.6em/3.75em $main_font
-	// 		& .transaction-table
-	// 			& thead
-	// 				& tr
-	// 					border: 0
-	// 					background: none
-	// 			& tr
-	// 				& th
-	// 					font: 600 1.6em $main_font
-	// 					text-transform: uppercase
-
-	// 		& .select
-	// 			background-color: #212121
-	// 			color: $white_color
-	// 			border: 0
-	// 			outline: none
-	// 			padding: 5px
-	// 			margin: 5px
 	
 	& .over-table
 		& .table
+			border-top: 1px solid #212121
+			border-bottom: 1px solid #212121
 			& thead
+				border-top: 1px solid #212121
 			& th
 				line-height: 6em
 				text-transform: uppercase
@@ -1035,9 +1004,10 @@ body
 				&:not(:first-of-type)
 					text-align: center
 
-		& tbody	
+		& tbody
+			border-bottom: 1px solid #212121
 			& tr
-				line-height: 3em
+				line-height: 1.3em
 				border-top: 1px solid #212121
 				
 				& td
@@ -1045,4 +1015,235 @@ body
 					
 					&:not(:first-of-type)
 						text-align: center
+.dataTables_length
+	float: left
+	width: 50%
+	margin: 20px 0
+	& label
+		font: 400 1.6em/3em $main_font
+		color: $white_color
+		& select
+			background-color: #212121
+			padding: 0
+			border: 0
+			outline: none
+			margin: 5px
+.dataTables_filter
+	float: right
+	width: 50%
+	text-align: right
+	margin: 20px 0
+	& label
+		color: $white_color
+		font: 400 1.6em/3.75em $main_font
+		& input
+			background-color: #212121
+			line-height: 3.75em
+			border: none
+			outline: none
+			max-width: 262px
+			width: 100%
+			margin-left: 10px
+			padding-left: 15px
+.dataTables_info
+	font: 600 1.6em/3em $main_font
+	color: $white_color
+	float: left
+	margin: 15px 0
+.dataTables_paginate
+	float: right
+	font: 600 1.6em/3em 'Monterrat', sans-serif
+	color: $white_color
+	margin: 15px 0
+	& .paginate_button
+		margin-right: 30px
+		&:last-child
+			color: #017c4c
+.sorting
+	background: url('../img/sort_both.png') right center no-repeat
+	cursor: pointer
+.sorting_asc
+	background: url('../img/sort_asc.png') right center no-repeat
+	cursor: pointer
+.sorting_desc
+	background: url('../img/sort_desc.png') right center no-repeat
+
+
+
+.roulette
+	margin-top: 40px
+	.controls
+		+flexbox()
+		padding: 40px 0
+		border-bottom: 1px solid #212121
+		.color-select
+			+flexbox()
+			+align-items(center)
+			+justify-content(center)
+			width: 30%
+			.btn-multi
+				margin: 0 10px
+				cursor: pointer
+				background: transparent
+				outline: none
+				border: none
+				img
+					width: 76px
+					height: auto
+					max-width: 100%
+					border-radius: 50%
+			.active
+				img
+					box-shadow: 0 0 3px 3px #58b948
+		.inputs-area
+			width: 55%
+			.buttons
+				+flexbox()
+				+align-items(center)
+				+justify-content(flex-start)
+				.button
+					font: 600 1.6em/3.75em $main_font
+					color: $white_color
+					border: 1px solid #464646
+					padding: 0 20px
+					text-transform: uppercase
+					cursor: pointer
+					background-color: #212121
+			.amount
+				+flexbox()
+				+justify-content(space-between)
+				margin-top: 20px
+				p
+					font: 600 1.6em/3.75em $main_font
+					color: $white_color
+					margin: 0
+				input
+					font: 600 1.6em/3.75em $main_font
+					color: #717171
+					border: none
+					background-color: #212121
+					outline: none
+					margin: 0
+					padding: 0 20px
+		.btn-play
+			border: none
+			outline: none
+			padding: 0
+			margin: 0
+			background-color: $red_color
+			font: 600 1.6em/8.75em $main_font
+			color: $white_color
+			width: 100%
+			max-width: 165px
+			margin-left: 30px
+
+	.balance-latest
+		+flexbox()
+		+align-items(center)
+		padding: 40px 0
+
+		.balance
+			font: 600 1.6em/3.75em $main_font
+			border-right: 1px solid #212121
+			padding-right: 50px
+			width: 15%
+			span
+				padding-right: 5px
+		.latest-right
+			+flexbox()
+			+justify-content(space-around)
+			width: 85%
+			font: 600 1.6em/3.75em $main_font
+			color: $white_color
+			padding: 0 35px 0 50px
+			p
+				margin: 0
+			.latest
+				+flexbox()
+				+align-items(center)
+				+justify-content(space-around)
+				.red-last-color
+					background-image: url('../img/coin-t.png')
+				.black-last-color
+					background-image: url('../img/coin_ct.png')
+				.green-last-color
+					background-image: url('../img/coin_up.png')
+				.last
+					width: 50px
+					height: 50px
+					background-position: center
+					background-repeat: no-repeat
+					background-size: contain
+					margin: 0 10px
+	.roulette-wheel-outer
+		position: relative
+		background-color: #2a2a2a
+		padding: 1px 0
+		border-top: 1px solid #2a2a2a
+		border-bottom: 1px solid #2a2a2a
+		.rolling
+			+flexbox()
+			+justify-content(center)
+			+align-items(center)
+			position: absolute
+			width: 100%
+			height: 100%
+			top: 0
+			left: 0
+			.rolling-inner
+				font: 600 4em $main_font
+				color: $white_color
+				text-align: center
+		.roulette-wheel
+			+flexbox()
+			+align-items(center)
+			+justify-content(center)
+			background-image: url('../img/roulette.png')
+			max-width: 1980px
+			height: 132px
+			background-position: center
+			background-repeat: no-repeat
+			margin: 0 auto
+			.pointer
+				width: 3px
+				height: 80%
+				background-color: $white_color
+	.roulette-info
+		font: 400 1.6em/5em $main_font
+		color: #717171
+		text-align: center
+
+	.bets
+		+flexbox()
+		+justify-content(space-between)
+		.bet-box
+			width: calc(100% / 3 - 60px / 3)
+			.bet-info
+				+flexbox()
+				.bet-label
+					+flexbox()
+					+align-items(center)
+					font: 400 1.6em/5.75em $main_font
+					text-transform: uppercase
+					width: 70%
+					img
+						width: 40px 
+						height: 40px
+						margin-right: 18px
+				.total-bet
+					width: 30%
+					font: 400 1.6em/5.75em $main_font
+					text-transform: uppercase
+					text-align: right
+					padding-right: 15px
+		.red-bet
+			color: #b4a36d
+		.green-bet
+			color: $red_color
+		.black-bet
+			color: #5d7990
+
+
+
+
 
