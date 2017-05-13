@@ -1190,10 +1190,13 @@ body
 			height: 100%
 			top: 0
 			left: 0
+			background-color: rgba(229, 57, 53, 0.1)
 			.rolling-inner
-				font: 600 4em $main_font
+				font: 600 1.6em $main_font
 				color: $white_color
 				text-align: center
+				div
+					font-size: 3em
 		.roulette-wheel
 			+flexbox()
 			+align-items(center)
@@ -1201,8 +1204,8 @@ body
 			background-image: url('../img/roulette.png')
 			max-width: 1980px
 			height: 132px
-			background-position: center
-			background-repeat: no-repeat
+			background-position-y: center
+			background-repeat-y: no-repeat
 			margin: 0 auto
 			.pointer
 				width: 3px
@@ -1216,10 +1219,12 @@ body
 	.bets
 		+flexbox()
 		+justify-content(space-between)
+		border-top: 1px solid #212121
 		.bet-box
 			width: calc(100% / 3 - 60px / 3)
 			.bet-info
 				+flexbox()
+				border-bottom: 1px solid #212121
 				.bet-label
 					+flexbox()
 					+align-items(center)
@@ -1243,7 +1248,32 @@ body
 		.black-bet
 			color: #5d7990
 
-
+	.player-bets
+		
+		.player-bet
+			+flexbox()
+			+align-items(center)
+			+justify-content(space-between)
+			font: 600 1.6em/4em $main_font
+			border-bottom: 1px solid #212121
+			.user
+				+flexbox()
+				+align-items(center)
+				+flex-direction(row)
+				overflow: hidden
+				white-space: nowrap
+				color: #717171
+				width: 70%
+				img
+					width: 40px
+					height: 40px
+					border-radius: 50%
+					margin-right: 18px
+			.amount
+				width: 30%
+				color: $white_color
+				text-align: right
+				padding-right: 15px
 
 
 
